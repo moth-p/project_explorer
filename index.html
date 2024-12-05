@@ -11,12 +11,12 @@
 </head>
 
 <body class="w-screen h-screen relative border-box ">
-    <header class="w-[100%] h-[100%] bg-banner bg-no-repeat bg-center md:bg-top">
+    <header class="w-[100%] h-[100%] bg-banner bg-no-repeat bg-cover">
         <nav class="bg-white/50 shadow fixed top-0 left-0 right-0 z-20">
             <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div class="relative flex h-20 justify-between">
                     <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        
+
                         <!-- ham menu button -->
                         <button type="button"
                             class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-rose-400 active:opacity-60"
@@ -49,7 +49,7 @@
                             <a href="#"><img class="h-6 w-auto" src="./src/img/logo.png" alt="Company Logo"></a>
                         </div>
                         <div class="hidden sm:ml-6 sm:flex sm:space-x-3 font-krona">
-                            
+
                             <div class="nav-btn flex justify-center items-center">
                                 <a href="#"
                                     class="inline-flex items-center px-5 py-3 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:bg-opacity-50 active:bg-opacity-50  hover:rounded-xl active:text-rose-200 focus:text-rose-400 focus:bg-opacity-90  focus:bg-gray-100 focus:rounded-xl">Home</a>
@@ -97,28 +97,70 @@
             </div>
         </nav>
 
-        <!-- banner area -->
-        <!-- banner-top-area + slogan -->
+        <!-- banner -->
+        <!-- banner-top+ slogan -->
         <section class="w-screen h-[45%] flex justify-center items-center pt-[15%]">
-            <p class="font-libreBodoni_boldItalic text-rose-400 text-[70px] sm:text-[120px] md:text-[150px] lg:text-[200px] 2xl:text-[250px]"><span class="italic">Explorer</span></p>
+            <p
+                class="font-libreBodoni_boldItalic text-rose-400 text-[70px] sm:text-[120px] md:text-[150px] lg:text-[200px] 2xl:text-[250px]">
+                <span class="italic">Explorer</span>
+            </p>
         </section>
 
-        <!-- banner-middle-area + banner iccon -->
+        <!-- banner-middle + star icon -->
         <section class="banner-middle-area w-screen h-[15%] flex justify-center items-center ">
-            <img src="./src/img/banner-icon.png" class="h-[100%]" alt="">
+            <img src="./src/img/banner-icon.png" class="h-[80%] lg:h-[100%]" alt="">
         </section>
-        
-        <!-- banner-botton-area + "HAVE FUN"s + icon arrow -->
+
+        <!-- banner-botton + "HAVE FUN"s -->
         <section class="w-screen h-[15%] mx-auto xl:max-w-7xl flex justify-center items-center gap-x-20 lg:pt-[5%]">
-            <p class="small-text text-neutral-100 hidden lg:block lg:text-2xl xl:text-3xl font-krona">{{&nbsp;Have Fun&nbsp;}}</p>
-            <p class="small-text text-neutral-100 text-2xl lg:text-2xl  xl:text-3xl font-krona">{{&nbsp;Have Fun&nbsp;}}</p>
-            <p class="small-text text-neutral-100 hidden lg:block lg:text-2xl  xl:text-3xl font-krona">{{&nbsp;Have Fun&nbsp;}}</p>
+            <p class="small-text text-neutral-100 hidden lg:block lg:text-2xl xl:text-3xl font-krona">{{&nbsp;Have
+                Fun&nbsp;}}</p>
+            <p class="small-text text-neutral-100 text-2xl lg:text-2xl  xl:text-3xl font-krona">{{&nbsp;Have Fun&nbsp;}}
+            </p>
+            <p class="small-text text-neutral-100 hidden lg:block lg:text-2xl  xl:text-3xl font-krona">{{&nbsp;Have
+                Fun&nbsp;}}</p>
         </section>
+
+        <!-- banner-botton + arrow icon  -->
         <div class="icon-arrow flex justify-center h-[10%] lg:items-center">
             <img src="./src/img/banner-icon-arrow.png" class="h-8" alt="arrow icon">
         </div>
     </header>
 
+    <main class="w-screen h-screen">
+        <!-- main-1-bg -->
+        <section class="w-[100%] h-[100%] bg-mainBG-1 bg-no-repeat bg-cover md:bg-top">
+            <section class="text-gray-200 w-screen h-[45%] flex justify-center items-center pt-[15%]">
+                <section class="flex justify-center items-center flex-col space-y-3 md:space-y-5">
+                    <p class="text-3xl md:text-5xl lg:text-7xl font-krona">Grand Canyon</p>
+                    <p class="text-3xl md:text-5xl lg:text-7xl font-krona">National Park</p>
+                </section>
+            </section>
+
+            <!-- main-1 star icon -->
+            <section class="banner-middle-area w-screen h-[15%] flex justify-center items-center opacity-65">
+                <img src="./src/img/banner-icon.png" class="h-[80%] lg:h-[100%]" alt="">
+            </section>
+
+            <!-- banner-botton-area + "HAVE FUN"s -->
+            <section class="w-screen h-[15%] mx-auto xl:max-w-7xl flex flex-col space-y-4 justify-center items-center gap-x-20 pt-[30%] lg:pt-[5%]">
+                <p class="small-text text-neutral-100 md:text-2xl lg:block lg:text-2xl xl:text-3xl font-krona">
+                    A Majestic Natural Wonder</p>
+                <p class="small-text text-neutral-100 md:text-2xl lg:text-2xl  xl:text-3xl font-krona">in Arizona, USA
+                </p>
+            </section>
+
+            <!-- arrow icon  -->
+            <!-- <div class="icon-arrow flex justify-center h-[10%] lg:items-center">
+                    <img src="./src/img/banner-icon-arrow.png" class="h-8" alt="arrow icon">
+                </div> -->
+
+            <!-- main-1st-banner -  context -->
+            <!-- <section class="context text-gray-200 space-y-10 h-[50%] flex flex-col justify-end items-end pb-20 pe-8">
+                <p class="text-5xl font-krona">A Majestic Natural Wonder</p>
+                <p class="text-5xl font-krona">in Arizona, USA</p>
+            </section> -->
+    </main>
 
 
     <footer></footer>
