@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content:  ["./**/*.{html,js}"],
+  content:  ["./**/*.{html,js}", '!./node_modules/**/*'],
   theme: {
     extend: {
       colors: {
@@ -13,13 +13,13 @@ module.exports = {
       },
       backgroundImage: {
         'banner': "url('./img/banner.png')",
-        'mainBG-1':"url('./img/main-bg-1.png')",
-        'mainBG-2':"url('./img/main-bg-2.png')",
-        'mainBG-3':"url('./img/main-bg-3.png')",
-        'mainBG-4':"url('./img/main-bg-4.png')",
-        'mainBG-5':"url('./img/main-bg-5.png')",
-        'mainBG-6':"url('./img/main-bg-6.png')",
-        'main-6-btn':"url('./img/main-6-button.png')",
+        'main-1-bg':"url('./img/main-1-bg.png')",
+        'main-2-bg':"url('./img/main-2-bg.png')",
+        'main-3-bg':"url('./img/main-3-bg.png')",
+        'main-5-bg':"url('./img/main-5-bg.png')",
+        'main-6-bg':"url('./img/main-6-bg.png')",
+        'main-7-bg':"url('./img/main-7-bg.png')",
+        'main-7-btn':"url('./img/main-7-button.png')",
       },
       animation: {
         marquee: 'marquee 32s linear infinite',
