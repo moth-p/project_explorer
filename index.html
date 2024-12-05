@@ -4,21 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Explorer</title>
     <link rel="icon" href="./src/img/logo.png">
     <link rel="stylesheet" href="./src/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
 
 <body class="w-screen h-screen relative border-box ">
-    <header class="w-[100%] h-[100%] bg-banner bg-no-repeat bg-top">
+    <header class="w-[100%] h-[100%] bg-banner bg-no-repeat bg-center md:bg-top">
         <nav class="bg-white/50 shadow fixed top-0 left-0 right-0 z-20">
             <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div class="relative flex h-20 justify-between">
                     <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        <!-- Mobile menu button -->
+                        
+                        <!-- ham menu button -->
                         <button type="button"
-                            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-rose-400"
+                            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-rose-400 active:opacity-60"
                             aria-controls="mobile-menu" aria-expanded="false">
                             <span class="absolute -inset-0.5"></span>
                             <span class="sr-only">Open main menu</span>
@@ -45,10 +46,10 @@
                     </div>
                     <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start gap-6">
                         <div class="flex shrink-0 items-center">
-                            <img class="h-6 w-auto" src="./src/img/logo.png" alt="Company Logo">
+                            <a href="#"><img class="h-6 w-auto" src="./src/img/logo.png" alt="Company Logo"></a>
                         </div>
                         <div class="hidden sm:ml-6 sm:flex sm:space-x-3 font-krona">
-                            <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
+                            
                             <div class="nav-btn flex justify-center items-center">
                                 <a href="#"
                                     class="inline-flex items-center px-5 py-3 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:bg-opacity-50 active:bg-opacity-50  hover:rounded-xl active:text-rose-200 focus:text-rose-400 focus:bg-opacity-90  focus:bg-gray-100 focus:rounded-xl">Home</a>
@@ -69,11 +70,11 @@
                     <div
                         class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                         <button type="button"
-                            class="relative rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:ring-offset-2">
+                            class="relative rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:ring-offset-2 active:opacity-60">
                             <span class="absolute -inset-1.5"></span>
                             <span class="sr-only">View notifications</span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-7 h-7">
+                                stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
                             </svg>
@@ -85,13 +86,12 @@
             <!-- Mobile menu, show/hide based on menu state. -->
             <div class="sm:hidden" id="mobile-menu">
                 <div class="space-y-1 pb-4 pt-2">
-                    <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
                     <a href="#"
-                        class="block border-l-4 border-rose-400 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-rose-400">Home</a>
+                        class="block border-l-4 hover:border-rose-400 hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-600 font-medium hover:text-rose-400 active:opacity-60">Home</a>
                     <a href="#"
-                        class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Shpo</a>
+                        class="block border-l-4 hover:border-rose-400 hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-600 font-medium hover:text-rose-400 active:opacity-60">Shpo</a>
                     <a href="#"
-                        class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">About
+                        class="block border-l-4 hover:border-rose-400 hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-600 font-medium hover:text-rose-400 active:opacity-60">About
                         Us</a>
                 </div>
             </div>
@@ -100,7 +100,7 @@
         <!-- banner area -->
         <!-- banner-top-area + slogan -->
         <section class="w-screen h-[45%] flex justify-center items-center pt-[15%]">
-            <p class="font-libreBodoni_boldItalic text-rose-400 text-[100px] sm:text-[120px] md:text-[150px] lg:text-[200px] 2xl:text-[250px]"><span class="italic">Explorer</span></p>
+            <p class="font-libreBodoni_boldItalic text-rose-400 text-[70px] sm:text-[120px] md:text-[150px] lg:text-[200px] 2xl:text-[250px]"><span class="italic">Explorer</span></p>
         </section>
 
         <!-- banner-middle-area + banner iccon -->
@@ -108,12 +108,15 @@
             <img src="./src/img/banner-icon.png" class="h-[100%]" alt="">
         </section>
         
-        <!-- banner-botton-area + "HAVE FUN"s -->
-        <section class="w-screen h-[25%] mx-auto xl:max-w-7xl flex justify-center items-center gap-x-20 pt-[15%] lg:pt-[5%]">
+        <!-- banner-botton-area + "HAVE FUN"s + icon arrow -->
+        <section class="w-screen h-[15%] mx-auto xl:max-w-7xl flex justify-center items-center gap-x-20 lg:pt-[5%]">
             <p class="small-text text-neutral-100 hidden lg:block lg:text-2xl xl:text-3xl font-krona">{{&nbsp;Have Fun&nbsp;}}</p>
-            <p class="small-text text-neutral-100 text-3xl lg:text-2xl  xl:text-3xl font-krona">{{&nbsp;Have Fun&nbsp;}}</p>
+            <p class="small-text text-neutral-100 text-2xl lg:text-2xl  xl:text-3xl font-krona">{{&nbsp;Have Fun&nbsp;}}</p>
             <p class="small-text text-neutral-100 hidden lg:block lg:text-2xl  xl:text-3xl font-krona">{{&nbsp;Have Fun&nbsp;}}</p>
         </section>
+        <div class="icon-arrow flex justify-center h-[10%] lg:items-center">
+            <img src="./src/img/banner-icon-arrow.png" class="h-8" alt="arrow icon">
+        </div>
     </header>
 
 
