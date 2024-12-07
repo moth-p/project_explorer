@@ -4,6 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        mainYellow: '#D4FB71',
+        subPurple: '#8CABFB',
         lightGray: '#F5F5F5',  
       },
       fontFamily:
