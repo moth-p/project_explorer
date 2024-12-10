@@ -11,6 +11,7 @@ module.exports = {
       fontFamily:
       {
         libreBodoni_boldItalic:['LibreBodoni-BoldItalic', 'serfif'],
+        libreBodoni_Regular:['LibreBodoni-Regular', 'serfif'],
         krona: ['KronaOne-Regular', 'sans-serif'], 
       },
       backgroundImage: {
