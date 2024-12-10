@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
 
-<body class="w-screen h-screen relative border-box bg-lightGray font-krona">
+<body class="w-screen h-screen relative border-box bg-lightGray font-krona scroll-smooth">
     <header class="w-full h-full bg-banner bg-no-repeat bg-cover">
         <nav class="bg-white/50 shadow fixed top-0 left-0 right-0 z-20">
             <div class="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
@@ -50,11 +50,11 @@
                         </div>
                     </div>
 
-                    <!-- user icon -->
+                    <!-- ig icon -->
                     <div class="absolute right-12 top-3 lg:top-5">
                         <button type="button"
                             class="w-10 h-10 rounded-full p-2 text-gray-800 hover:text-subPurple hover:bg-lightGray active:opacity-60 flex justify-center items-center">
-                            <i class="fa-solid fa-user"></i>
+                            <i class="fa-brands fa-instagram"></i>
                         </button>
                     </div>
 
@@ -81,6 +81,10 @@
             </div> -->
         </nav>
 
+        <!-- go top btn -->
+        <a href="#"
+            class="invisible md:visible fixed end-16 bottom-20 w-12 h-12 text-subPurple bg-lightGray hover:bg-mainYellow hover:text-subPurple rounded-full flex justify-center items-center z-20">top</a>
+
         <!-- banner -->
         <!-- banner-top + title -->
         <div
@@ -94,7 +98,7 @@
         </div>
 
         <!-- banner-middle + star icon -->
-        <div class="w-screen h-[15%] flex justify-center items-center ">
+        <div class="w-screen h-[15%] flex justify-center items-center">
             <img src="./src/img/banner-icon.png" class="h-[60%] max-h-[100px] object-cover" alt="">
         </div>
 
@@ -120,7 +124,7 @@
             <div class="w-screen h-[45%] text-mainYellow flex justify-center items-center pt-[15%]">
                 <div
                     class="text-3xl flex flex-col justify-center items-center space-y-3 md:space-y-5 md:text-5xl lg:text-7xl">
-                    <p>Vík</p>
+                    <p>Vestrahorn</p>
                 </div>
             </div>
 
@@ -132,8 +136,8 @@
             <!-- main-1-botton + texts-->
             <div
                 class="w-screen h-[15%] text-sm text-lightGray flex flex-col justify-center items-center space-y-3 mx-auto pt-[6%] md:space-y-4 md:text-2xl lg:space-y-6 lg:pt-[5%] lg:text-3xl">
-                <p>A Charming Village</p>
-                <p>for Northern Lights Viewing</p>
+                <p>Kerid Crater Lake, a natural wonder</p>
+                <p>for trail Exploration</p>
             </div>
         </section>
 
@@ -142,20 +146,20 @@
             <div class="w-screen h-[45%] text-mainYellow flex justify-center items-center pt-[15%]">
                 <div
                     class="text-3xl flex flex-col justify-center items-center space-y-3 md:space-y-5 md:text-5xl lg:text-7xl">
-                    <p>Vík</p>
+                    <p>Klausturholar</p>
                 </div>
             </div>
 
-            <!-- main-3-middle star icon -->
+            <!-- main-2-middle star icon -->
             <div class="w-screen h-[15%] flex justify-center items-center opacity-80">
                 <img src="./src/img/banner-icon.png" class="h-[60%] max-h-[100px] object-cover" alt="">
             </div>
 
-            <!-- main-3-botton + texts-->
+            <!-- main-2-botton + texts-->
             <div
                 class="w-screen h-[15%] text-sm text-lightGray flex flex-col justify-center items-center space-y-3 mx-auto pt-[6%] md:space-y-4 md:text-2xl lg:space-y-6 lg:pt-[5%] lg:text-3xl">
-                <p>A Charming Village</p>
-                <p>for Northern Lights Viewing</p>
+                <p>A Majestic Mountain</p>
+                <p>for photography and hiking</p>
             </div>
         </section>
 
@@ -191,7 +195,8 @@
                         <i class="fa-solid fa-person-hiking"></i>&nbsp;&nbsp;Iceland&nbsp;&nbsp;
                         <i class="fa-solid fa-person-hiking"></i>&nbsp;&nbsp;Iceland&nbsp;&nbsp;<i
                             class="fa-solid fa-person-hiking"></i>&nbsp;&nbsp;Iceland&nbsp;&nbsp;<i
-                            class="fa-solid fa-person-hiking"></i>&nbsp;&nbsp;Iceland</div>
+                            class="fa-solid fa-person-hiking"></i>&nbsp;&nbsp;Iceland
+                    </div>
                 </div>
             </div>
         </section>
@@ -296,7 +301,7 @@
             </div>
             <!-- 置中 button => top-[calc(50%-27px)] -->
             <div class="absolute top-[calc(50%-27px)] w-14 md:w-16 lg:w-24">
-                <button type="button"><img src="./src/img/main-7-button.png" class="w-full h-full object-cover"
+                <button type="button"><img src="./src/img/main-7-button.png" class="videoBtn w-full h-full object-cover"
                         alt=""></button>
             </div>
         </section>
@@ -326,6 +331,21 @@
         </section>
     </footer>
 
+    <script>
+        // main-7 按鈕 hover 事件
+        const videoBtn = document.querySelector('.videoBtn');
+        videoBtn.addEventListener('mouseenter', () => {
+            if (videoBtn.src.includes('main-7-button.png')) {
+                videoBtn.src = './src/img/main-7-button-2.png'
+            }
+        })
+
+        videoBtn.addEventListener('mouseleave', () => {
+            if (videoBtn.src.includes('main-7-button-2.png')) {
+                videoBtn.src = './src/img/main-7-button.png'
+            }
+        })
+    </script>
 </body>
 
 </html>
