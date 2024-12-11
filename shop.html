@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="icon" href="./src/img/logo.png">
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body class="w-screen h-screen relative border-box bg-lightGray font-krona scroll-smooth">
+    <header class="w-full h-full">
+        <nav class="bg-white/50 shadow fixed top-0 left-0 right-0 z-20">
+            <div class="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+
+                        <!-- ham dropdown menu button -->
+                        <button type="button"
+                            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-40 hover:bg-lightGray hover:text-subPurple focus:outline-none focus:ring-2 focus:ring-inset focus:ring-subPurple focus:bg-lightGray active:opacity-60"
+                            aria-controls="mobile-menu" aria-expanded="false">
+
+                            <svg class="block size-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:justify-start gap-6">
+                        <div class="flex shrink-0 items-center">
+                            <a href="#"><img class="invisible md:visible md:h-7 w-auto" src="./src/img/shop-logo.png" alt="Company Logo"></a>
+                        </div>
+                        <div class="hidden sm:ml-6 sm:flex sm:space-x-3">
+
+                            <div class="nav-btn flex justify-center items-center text-gray-800">
+                                <p
+                                    class="cursor-pointer px-3 py-2 text-sm hover:bg-lightGray hover:text-subPurple hover:rounded-md">
+                                    Booking
+                                    Tours&nbsp;<i class="fa-solid fa-angle-down"></i></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="flex flex-1 items-center sm:justify-end gap-3">
+                        <!-- FAQ -->
+                        <div class="nav-btn flex justify-end items-center">
+                            <a href="#"
+                                class="inline-flex items-center px-3 py-2 text-sm hover:bg-lightGray hover:text-subPurple active:bg-opacity-50 hover:rounded-md active:text-mainYellow focus:text-gray-800 focus:bg-opacity-90 focus:bg-gray-100 focus:rounded-md">FAQ</a>
+                        </div>
+
+                        <!-- search icon -->
+                        <div>
+                            <button type="button"
+                                class="w-10 h-10 rounded-full p-2 hover:text-subPurple hover:bg-lightGray active:opacity-60">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+
+                        <!-- cart icon -->
+                        <div>
+                            <button type="button"
+                                class="w-10 h-10 rounded-full p-2 hover:text-subPurple hover:bg-lightGray active:opacity-60">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
+
+                        <!-- user icon -->
+                        <div>
+                            <button type="button"
+                                class="w-10 h-10 rounded-full p-2 text-gray-800 hover:text-subPurple hover:bg-lightGray active:opacity-60">
+                                <i class="fa-solid fa-user"></i>
+                            </button>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <!-- <div class="sm:hidden" id="mobile-menu">
+                <div class= space-y-1 pb-4 pt-2">
+                    <a href="#"
+                        class="block border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-600 font-medium hover:text-subPurple active:opacity-60">Concept</a>
+                    <a href="#"
+                        class="block border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-600 font-medium hover:text-subPurple active:opacity-60">Shop</a>
+                    <a href="#"
+                        class="block border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-600 font-medium hover:text-subPurple active:opacity-60">Contact us</a>
+                </div>
+            </div> -->
+        </nav>
+
+        <!-- Swiper -->
+        <section
+            class="swiper mySwiper w-screen h-[300px] md:h-[450px] lg:h-[600px] flex justify-center items-center mt-[80px]">
+            <div class="swiper-wrapper w-full h-full">
+
+                <!-- swiper-1-area -->
+                <div
+                    class="swiper-slide w-full h-full bg-carousel-1-sm md:bg-carousel-1 bg-cover bg-no-repeat grid grid-row-12 p-8 md:p-10 lg:p-14">
+                    <div
+                        class="text-3xl md:text-5xl row-span-6 lg:text-7xl text-mainYellow mb-3 md:mb-5 lg:mb-8 relative">
+                        Kirkjufell
+                        <span><img src="./src/img/logo.png"
+                                class="h-[20px] md:h-[35px] lg:h-[50px] absolute top-2 lg:top-3 right-0" alt=""></span>
+                    </div>
+                    <div class="text-3xl md:text-5xl row-span-6 lg:text-7xl text-mainYellow md:mb-52 lg:mb-64">Hiking
+                    </div>
+                    <div class="invisible md:visible md:text-lg row-span-6 lg:text-2xl text-lightGray">Known as the
+                        "photographer's paradise".</div>
+                </div>
+
+                <!-- swiper-2-area -->
+                <div
+                    class="swiper-slide w-full h-full bg-carousel-2-sm md:bg-carousel-2 bg-cover bg-no-repeat grid grid-row-12 p-8 md:p-10 lg:p-14">
+                    <div
+                        class="text-3xl md:text-5xl row-span-6 lg:text-7xl text-mainYellow mb-3 md:mb-5 lg:mb-8 relative">
+                        Gullfoss
+                        <span><img src="./src/img/logo.png"
+                                class="h-[20px] md:h-[35px] lg:h-[50px] absolute top-2 lg:top-3 right-0" alt=""></span>
+                    </div>
+                    <div class="text-3xl md:text-5xl row-span-6 lg:text-7xl text-mainYellow md:mb-52 lg:mb-64">Falls
+                    </div>
+
+                    
+                    <div class="invisible md:visible md:text-lg row-span-6 lg:text-2xl text-lightGray">known as Golden Falls,the breathtaking waterfalls.</div>
+                </div>
+
+                <!-- swiper-3-area -->
+                <div
+                    class="swiper-slide w-full h-full bg-carousel-3-sm md:bg-carousel-3 bg-cover bg-no-repeat grid grid-row-12 p-8 md:p-10 lg:p-14">
+                    <div
+                        class="text-3xl md:text-5xl row-span-6 lg:text-7xl text-mainYellow mb-3 md:mb-5 lg:mb-8 relative">
+                        Námafjall
+                        <span><img src="./src/img/logo.png"
+                                class="h-[20px] md:h-[35px] lg:h-[50px] absolute top-2 lg:top-3 right-0" alt=""></span>
+                    </div>
+                    <div class="text-3xl md:text-5xl row-span-6 lg:text-7xl text-mainYellow md:mb-52 lg:mb-64">Geotherm
+                    </div>
+                    <div class="invisible md:visible md:text-lg row-span-6 lg:text-2xl text-lightGray">Be characterized by sulfuric fumaroles and mud pools.</div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        let swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed: 900,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: true,
+            },
+        });
+
+        //滑鼠移入：暫停輪播
+        document.querySelector('.mySwiper').addEventListener('mouseenter', function () {
+            swiper.autoplay.stop();
+        });
+
+        //滑鼠移出：繼續輪播
+        document.querySelector('.mySwiper').addEventListener('mouseleave', function () {
+            swiper.autoplay.start();
+        });
+    </script>
+</body>
+
+</html>

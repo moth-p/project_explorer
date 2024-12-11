@@ -23,6 +23,12 @@ module.exports = {
         'main-6':"url('./img/main-6.png')",
         'main-7-bg':"url('./img/main-7-bg.png')",
         'main-7-btn':"url('./img/main-7-button.png')",
+        'carousel-1': "url('./img/carousel-1.png')",
+        'carousel-2': "url('./img/carousel-2.png')",
+        'carousel-3': "url('./img/carousel-3.png')",
+        'carousel-1-sm': "url('./img/carousel-1-sm.png')",
+        'carousel-2-sm': "url('./img/carousel-2-sm.png')",
+        'carousel-3-sm': "url('./img/carousel-3-sm.png')",
       },
       animation: {
         marquee: 'marquee 32s linear infinite',
