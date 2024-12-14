@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
 
-<body class="w-screen h-screen relative border-box bg-lightGray font-krona scroll-smooth">
+<body class="w-screen h-screen relative border-box bg-lightGray font-krona">
     <header class="w-full h-full bg-banner bg-no-repeat bg-cover">
         <nav class="bg-white/50 shadow fixed top-0 left-0 right-0 z-20">
             <div class="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
@@ -19,7 +19,7 @@
                     <!-- ham dropdown menu button -->
                     <div id="hamBtn" class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                         <button type="button"
-                            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-40 hover:bg-lightGray hover:text-subPurple focus:outline-none focus:ring-2 focus:ring-inset focus:ring-subPurple focus:bg-lightGray active:opacity-60"
+                            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-40 hover:bg-lightGray hover:text-subPurple active:opacity-60"
                             aria-controls="mobile-menu" aria-expanded="false">
 
                             <svg class="block size-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -29,46 +29,50 @@
                             </svg>
                         </button>
                     </div>
+
+                    <!-- logo -->
                     <div class="flex flex-1 items-center justify-center sm:justify-start gap-6">
                         <div class="flex shrink-0 items-center">
                             <a href="#"><img class="h-7 w-auto" src="./src/img/logo.png" alt="Company Logo"></a>
                         </div>
+
+                        <!-- nav select -->
                         <div class="hidden sm:ml-6 sm:flex sm:space-x-3">
 
                             <div class="nav-btn flex justify-center items-center">
-                                <a href="#"
-                                    class="inline-flex items-center px-3 py-2 text-sm text-gray-900 hover:bg-lightGray hover:text-subPurple active:bg-opacity-50 hover:rounded-md active:text-mainYellow focus:text-gray-800 focus:bg-opacity-90 focus:bg-gray-100 focus:rounded-md">Concept</a>
+                                <a href=""
+                                    class="inline-flex items-center px-3 py-2 text-sm text-gray-900 hover:bg-lightGray hover:text-subPurple active:bg-opacity-50 hover:rounded-md active:text-mainYellow">Concept</a>
                             </div>
                             <div class="nav-btn flex justify-center items-center">
                                 <a href="./shop.html"
-                                    class="inline-flex items-center px-3 py-2 text-sm text-gray-900  hover:bg-lightGray hover:text-subPurple active:bg-opacity-50 hover:rounded-md active:text-mainYellow focus:text-gray-800 focus:bg-opacity-90 focus:bg-gray-100 focus:rounded-md">Shop</a>
+                                    class="inline-flex items-center px-3 py-2 text-sm text-gray-900  hover:bg-lightGray hover:text-subPurple active:bg-opacity-50 hover:rounded-md active:text-mainYellow">Shop</a>
                             </div>
                             <div class="nav-btn flex justify-center items-center">
-                                <a href="#"
-                                    class="inline-flex items-center px-3 py-2 text-sm text-gray-900  hover:bg-lightGray hover:text-subPurple active:bg-opacity-50 hover:rounded-md active:text-mainYellow focus:text-gray-800 focus:bg-opacity-90 focus:bg-gray-100 focus:rounded-md">Contact
+                                <a href=""
+                                    class="inline-flex items-center px-3 py-2 text-sm text-gray-900  hover:bg-lightGray hover:text-subPurple active:bg-opacity-50 hover:rounded-md active:text-mainYellow">Contact
                                     us</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- cart icon -->
-                    <div class="absolute top-3 right-0">
+                    <a href="./shop.html" class="absolute top-3 right-0">
                         <button type="button"
-                            class="w-10 h-10 rounded-full p-2 text-gray-800 hover:text-subPurple hover:bg-lightGray active:opacity-60 flex justify-center items-center">
+                            class="w-10 h-10 rounded-full text-gray-800 hover:text-subPurple hover:bg-lightGray active:opacity-60 flex justify-center items-center">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </button>
-                    </div>
+                    </a>
                 </div>
             </div>
 
             <!-- Mobile menu, show/hide based on menu state. -->
             <div class="sm:hidden" id="mobile-menu">
                 <div class=space-y-1 pb-4 pt-2">
-                    <a href="#"
+                    <a href=""
                         class="block border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-800 font-medium hover:text-subPurple active:opacity-60">Concept</a>
                     <a href="./shop.html"
                         class="block border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-800 font-medium hover:text-subPurple active:opacity-60">Shop</a>
-                    <a href="#"
+                    <a href=""
                         class="block border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-800 font-medium hover:text-subPurple active:opacity-60">Contact
                         us</a>
                 </div>
@@ -84,9 +88,9 @@
         <!-- banner -->
         <!-- banner-top + title -->
         <div
-            class="w-screen h-[45%] flex flex-col justify-center items-center pt-[120px] md:pt-[150px] lg:pt-[220px] lg:mb-14">
+            class="w-screen h-[45%] flex flex-col justify-center items-center pt-[120px] md:pt-[140px] lg:pt-[150px] lg:mb-14">
             <h1
-                class="font-libreBodoni_boldItalic text-mainYellow text-[70px] sm:text-[100px] md:text-[120px] lg:text-[160px]">
+                class="font-libreBodoni_boldItalic text-mainYellow text-[70px] sm:text-[100px] md:text-[120px] lg:text-[150px]">
                 <span class="">Explorer</span>
             </h1>
             <h2 class="font-libreBodoni_boldItalic text-lightGray text-3xl md:text-4xl lg:text-5xl  tracking-widest">in
@@ -99,17 +103,17 @@
         </div>
 
         <!-- banner-botton + texts -->
-        <div class="w-screen h-[15%] mx-auto xl:max-w-7xl flex justify-center items-center gap-x-20 lg:pt-[5%]">
-            <p class="small-text text-lightGray hidden lg:block lg:text-2xl">{{&nbsp;Have
+        <div class="w-screen h-[15%] mx-auto xl:max-w-7xl flex justify-center items-center gap-x-20 lg:pt-[3%]">
+            <p class="small-text text-lightGray hidden lg:block lg:text-lg">{{&nbsp;Have
                 Fun&nbsp;}}</p>
-            <p class="small-text text-lightGray text-2xl lg:text-2xl">{{&nbsp;Have Fun&nbsp;}}
+            <p class="small-text text-lightGray text-2xl lg:text-lg">{{&nbsp;Have Fun&nbsp;}}
             </p>
-            <p class="small-text text-lightGray hidden lg:block lg:text-2xl">{{&nbsp;Have
+            <p class="small-text text-lightGray hidden lg:block lg:text-lg">{{&nbsp;Have
                 Fun&nbsp;}}</p>
         </div>
 
         <!-- banner-botton + arrow icon  -->
-        <div class="icon-arrow flex justify-center h-[10%] lg:items-center">
+        <div class="icon-arrow flex justify-center h-[5%] lg:items-center">
             <img src="./src/img/banner-icon-arrow.png" class="h-8" alt="arrow icon">
         </div>
     </header>
@@ -295,7 +299,7 @@
             <div class="absolute top-20 md:top-28 lg:top-36 text-mainYellow text-3xl md:text-6xl lg:text-8xl">
                 <p>Start a Journey</p>
             </div>
-            <!-- 置中 button => top-[calc(50%-27px)] -->
+
             <div class="absolute top-[calc(50%-27px)] w-14 md:w-16 lg:w-24">
                 <button type="button"><img src="./src/img/main-7-button.png" class="videoBtn w-full h-full object-cover"
                         alt=""></button>
@@ -306,10 +310,13 @@
     <footer class="bg-gray-400 text-lightGray">
         <section class="w-screen h-[350px] md:h-[250px]">
             <div class="grid grid-row-12 px-8 py-14 md:py-12 justify-center items-center">
+                <!-- footer logo -->
                 <div class="row-span-7 flex flex-col justify-center items-center space-y-4 mb-6">
-                    <img src="./src/img/logo.png" class="max-w-[40px] max-h-[40px]" alt="">
+                    <img src="./src/img/logo.png" class="max-w-[40px] max-h-[40px]" alt="company logo">
                     <p class="text-sm">Explore &copy;</p>
                 </div>
+
+                <!-- footer select -->
                 <div
                     class="row-span-5 flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-5 text-md">
                     <div class="md:hidden line w-52 h-[1px] bg-lightGray"></div>
