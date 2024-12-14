@@ -60,7 +60,7 @@
                     </div>
 
                     <!-- search icon -->
-                    <a href="" class="absolute top-3 right-[80px]">
+                    <a href="" class="absolute top-3 right-[80px] md:right-[100px]">
                         <button type="button"
                             class="w-10 h-10 rounded-full text-gray-800 hover:text-subPurple hover:bg-lightGray active:opacity-60 flex justify-center items-center">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -68,7 +68,7 @@
                     </a>
 
                     <!-- cart icon -->
-                    <a href="" class="absolute top-3 right-[40px]">
+                    <a href="" class="absolute top-3 right-[40px] md:right-[50px]">
                         <button type="button"
                             class="w-10 h-10 rounded-full text-gray-800 hover:text-subPurple hover:bg-lightGray active:opacity-60 flex justify-center items-center">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -85,11 +85,12 @@
                 </div>
             </div>
 
-            <!-- Mobile menu, show/hide based on menu state. -->
+            <!-- Mobile ham menu -->
             <div class="sm:hidden" id="mobile-menu">
-                <div class=space-y-1 pb-4 pt-2">
+                <div class="space-y-1 pb-4 pt-2">
                     <a href=""
-                        class="block border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-800 font-medium hover:text-subPurple active:opacity-60">Booking</a>
+                        class="block border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-800 font-medium hover:text-subPurple active:opacity-60">Booking&nbsp;<i
+                            class="fa-solid fa-plus"></i></a>
                     <a href="./shop.html"
                         class="block border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-800 font-medium hover:text-subPurple active:opacity-60">FAQ</a>
                     <a href=""
@@ -97,6 +98,74 @@
                         us</a>
                 </div>
             </div>
+
+            <!-- Booking flyout menu-->
+            <div class="hidden sm:block absolute inset-x-0 top-0 -z-10 bg-white pt-16 shadow-lg ring-1 ring-gray-900/5">
+                <div
+                    class="grid grid-cols-1 gap-2  py-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-0 sm:py-10 lg:grid-cols-4 lg:gap-4 mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
+                    <div class="relative -mx-3 flex gap-6 rounded-lg p-3 text-sm/6 sm:flex-col sm:p-6">
+                        <!-- flyout menu-1 -->
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">
+                                <a href="" class="group">Hiking&nbsp;&nbsp;&nbsp;<span class="group-hover:ms-[5px]"><i
+                                            class="fa-solid fa-chevron-right"></i></span></i></a>
+                            </h4>
+                            <ul class="text-gray-600 font-mono">
+                                <li class="hover:text-subPurple"><a href="">Laugavegur</a></li>
+                                <li class="hover:text-subPurple"><a href="">Hornstrandir</a></li>
+                                <li class="hover:text-subPurple"><a href="">Skaftafell</a></li>
+                                <li class="hover:text-subPurple"><a href="">Ásbyrgi Canyon</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative -mx-3 flex gap-6 rounded-lg p-3 text-sm/6 sm:flex-col sm:p-6">
+                        <!-- flyout menu-2 -->
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">
+                                <a href="" class="group">Sightseeing&nbsp;&nbsp;&nbsp;<span class="group-hover:ms-[5px]"><i
+                                            class="fa-solid fa-chevron-right"></i></span></i></a>
+                            </h4>
+                            <ul class="text-gray-600 font-mono">
+                                <li class="hover:text-subPurple"><a href="">Boat Tour</a></li>
+                                <li class="hover:text-subPurple"><a href="">Nature Reserve Tour</a></li>
+                                <li class="hover:text-subPurple"><a href="">Ecotourism</a></li>
+                                <li class="hover:text-subPurple"><a href="">Culture Tour</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative -mx-3 flex gap-6 rounded-lg p-3 text-sm/6 sm:flex-col sm:p-6">
+                        <!-- flyout menu-3 -->
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">
+                                <a href="" class="group">Outdoor Sports&nbsp;&nbsp;&nbsp;<span class="group-hover:ms-[5px]"><i
+                                            class="fa-solid fa-chevron-right"></i></span></i></a>
+                            </h4>
+                            <ul class="text-gray-600 font-mono">
+                                <li class="hover:text-subPurple"><a href="">Skiing and Snowboarding</a></li>
+                                <li class="hover:text-subPurple"><a href="">Kayaking</a></li>
+                                <li class="hover:text-subPurple"><a href="">Horseback Riding</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative -mx-3 flex gap-6 rounded-lg p-3 text-sm/6 sm:flex-col sm:p-6">
+                        <!-- flyout menu-3 -->
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">
+                                <a href="" class="group">Festival&nbsp;&nbsp;&nbsp;<span class="group-hover:ms-[5px]"><i
+                                            class="fa-solid fa-chevron-right"></i></span></i></a>
+                            </h4>
+                            <ul class="text-gray-600 font-mono">
+                                <li class="hover:text-subPurple"><a href="">Reykjavík Culture Night</a></li>
+                                <li class="hover:text-subPurple"><a href="">Iceland Airwaves</a></li>
+                                <li class="hover:text-subPurple"><a href="">The Great Fish Day</a></li>
+                                <li class="hover:text-subPurple"><a href="">Winter Lights Festival</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </nav>
 
         <!-- Swiper -->
@@ -106,7 +175,7 @@
 
                 <!-- swiper-1-area -->
                 <div
-                    class="swiper-slide w-full h-full bg-carousel-1-sm md:bg-carousel-1 bg-cover bg-no-repeat grid grid-row-12 p-8 md:p-10 lg:p-14">
+                    class="swiper-slide w-full h-full bg-swiper-1-sm md:bg-swiper-1 bg-cover bg-no-repeat grid grid-row-12 p-8 md:p-10 lg:p-14">
                     <div
                         class="text-3xl md:text-5xl row-span-6 lg:text-7xl text-mainYellow mb-3 md:mb-5 lg:mb-8 relative">
                         Kirkjufell
@@ -121,7 +190,7 @@
 
                 <!-- swiper-2-area -->
                 <div
-                    class="swiper-slide w-full h-full bg-carousel-2-sm md:bg-carousel-2 bg-cover bg-no-repeat grid grid-row-12 p-8 md:p-10 lg:p-14">
+                    class="swiper-slide w-full h-full bg-swiper-2-sm md:bg-swiper-2 bg-cover bg-no-repeat grid grid-row-12 p-8 md:p-10 lg:p-14">
                     <div
                         class="text-3xl md:text-5xl row-span-6 lg:text-7xl text-mainYellow mb-3 md:mb-5 lg:mb-8 relative">
                         Gullfoss
@@ -138,7 +207,7 @@
 
                 <!-- swiper-3-area -->
                 <div
-                    class="swiper-slide w-full h-full bg-carousel-3-sm md:bg-carousel-3 bg-cover bg-no-repeat grid grid-row-12 p-8 md:p-10 lg:p-14">
+                    class="swiper-slide w-full h-full bg-swiper-3-sm md:bg-swiper-3 bg-cover bg-no-repeat grid grid-row-12 p-8 md:p-10 lg:p-14">
                     <div
                         class="text-3xl md:text-5xl row-span-6 lg:text-7xl text-mainYellow mb-3 md:mb-5 lg:mb-8 relative">
                         Námafjall
