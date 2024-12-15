@@ -61,12 +61,12 @@
                     </div>
 
                     <!-- search icon -->
-                    <a href="" class="absolute top-3 right-[80px] md:right-[100px]">
+                    <p id="searchIcon" class="absolute cursor-pointer top-3 right-[80px] md:right-[100px]">
                         <button type="button"
                             class="w-10 h-10 rounded-full text-gray-800 hover:text-subPurple hover:bg-lightGray active:opacity-60 flex justify-center items-center">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                    </a>
+                    </p>
 
                     <!-- cart icon -->
                     <a href="" class="absolute top-3 right-[40px] md:right-[50px]">
@@ -83,6 +83,25 @@
                             <i class="fa-solid fa-user"></i>
                         </button>
                     </a>
+
+                    <div id="bgMask" class="hidden fixed inset-0 bg-gray-500/25 transition-opacity" aria-hidden="true">
+                    </div>
+
+                    <!-- search box -->
+                    <div id="searchBox"
+                        class="hidden absolute z-10 top-24 right-8 max-w-72 font-mono divide-gray-100 overflow-hidden rounded-xl bg-lightGray">
+                        <div class="grid grid-cols-1">
+                            <input type="text"
+                                class="col-start-1 row-start-1 h-10 w-full pl-11 pr-4 text-base text-gray-900 outline-none placeholder:text-gray-400"
+                                placeholder="Search..." role="combobox" aria-expanded="false" aria-controls="options">
+                            <svg class="pointer-events-none col-start-1 row-start-1 ml-4 size-5 self-center text-gray-400"
+                                viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd"
+                                    d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -119,7 +138,7 @@
                         </ul>
 
                         <!-- ham menu - accordion 3 -->
-                        <h4 class="font-semibold text-subPurple mb-3">
+                        <h4 class="text-subPurple mb-3">
                             <a href="" class="group">Outdoor Sports</a>
                         </h4>
                         <ul class="text-gray-600 font-mono">
@@ -129,8 +148,8 @@
                         </ul>
 
                         <!-- ham menu - accordion 4 -->
-                        <h4 class="font-semibold text-gray-800 mb-3">
-                            <a href="" class="group text-subPurple">Festival</a>
+                        <h4 class="text-subPurple mb-3">
+                            <a href="" class="group">Festival</a>
                         </h4>
                         <ul class="text-gray-600 font-mono">
                             <li class="hover:text-subPurple mb-2"><a href="">Reykjavík Culture Night</a></li>
@@ -224,8 +243,8 @@
 
                 </div>
             </div>
-
         </nav>
+
         <!-- Swiper -->
         <section id="bannerSwiper"
             class="swiper w-screen h-[300px] md:h-[450px] lg:h-[600px] flex justify-center items-center mt-[80px]">
@@ -305,23 +324,16 @@
         const hamMenu = document.querySelector('#mobile-menu');
         const navBar = document.querySelector('#navBar');
 
-        // ham 手風琴變數
-        const accordionBtn = document.querySelector('#accordionBtn');
-        const accordionContext = document.querySelector('#accordionContext');
-        const plusIcon = document.querySelector('#plusIcon');
-        const plus = `<i class="fa-solid fa-plus"></i>`;
-        const minus = `<i class="fa-solid fa-minus"></i>`;
-
         hamMenu.style.display = 'none';
 
-        function showAccordion(result) {
-            accordionContext.style.display = result ? 'block' : 'none';
-        }
-
         // 點擊視窗空白處，關掉ham menu
-        window.onclick = function hideDropdown() {
-            hamMenu.style.display = 'none';
-        }
+        window.addEventListener('click', () => {
+            // hamMenu.style.display = 'none';
+            // searchBox.style.display = 'none';
+            [hamMenu, searchBox, bgMask].forEach(element => {
+                element.style.display = 'none';
+            })
+        });
 
         // 防止ham menu事件冒泡（不要吃到 window.onclick 效果）
         hamMenu.addEventListener('click', (e) => {
@@ -348,6 +360,12 @@
         });
 
         // ham-menu accordion 手風琴
+        const accordionBtn = document.querySelector('#accordionBtn');
+        const accordionContext = document.querySelector('#accordionContext');
+        const plusIcon = document.querySelector('#plusIcon');
+        const plus = `<i class="fa-solid fa-plus"></i>`;
+        const minus = `<i class="fa-solid fa-minus"></i>`;
+
         accordionBtn.addEventListener('click', function () {
             accordionContext.scrollTop = 0;
 
@@ -361,6 +379,25 @@
                 showAccordion(false);
                 plusIcon.innerHTML = plus;
             }
+        })
+
+        function showAccordion(result) {
+            accordionContext.style.display = result ? 'block' : 'none';
+        }
+
+        // search box 搜尋框 顯示／隱藏 
+        const searchIcon = document.querySelector('#searchIcon');
+        const searchBox = document.querySelector('#searchBox');
+        const bgMask = document.querySelector('#bgMask');
+
+        searchIcon.addEventListener('click', () => {
+            event.stopPropagation();
+            searchBox.style.display = 'block';
+            bgMask.style.display = 'block';
+        });
+
+        searchBox.addEventListener('click', (e) => {
+            e.stopPropagation(); // 防止事件冒泡
         })
 
         // banner 輪播
