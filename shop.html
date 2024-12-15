@@ -14,7 +14,7 @@
 
 <body class="w-screen h-screen relative border-box bg-lightGray font-krona scroll-smooth">
     <header class="w-full h-full">
-        <nav class="bg-white/50 shadow fixed top-0 left-0 right-0 z-20">
+        <nav id="navBar" class="bg-white/50 shadow fixed top-0 left-0 right-0 z-20">
             <div class="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
                 <div class="relative flex h-16 justify-between">
 
@@ -88,14 +88,62 @@
 
             <!-- Mobile ham menu -->
             <div class="sm:hidden" id="mobile-menu">
-                <div class="space-y-1 pb-4 pt-2">
-                    <a href=""
-                        class="block border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-800 font-medium hover:text-subPurple active:opacity-60">Booking&nbsp;<i
-                            class="fa-solid fa-plus"></i></a>
+                <div class="space-y-1 pb-5 bg-lightGray max-h-80 overflow-y-auto">
+
+                    <p id="accordionBtn"
+                        class="block cursor-pointer border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 ps-3 pe-4 text-gray-800 font-medium hover:text-subPurple active:opacity-60">
+                        Booking&nbsp;&nbsp;<span id="plusIcon"><i class="fa-solid fa-plus"></i></span></p>
+
+                    <div id="accordionContext" class="hidden ps-8 py-2">
+                        <!-- ham menu - Accordion 1 -->
+                        <h4 class="text-subPurple mb-3">
+                            <a href="" class="group">Hiking</a>
+                        </h4>
+                        <ul class="text-gray-600 font-mono">
+                            <li class="hover:text-subPurple mb-2"><a href="">Laugavegur</a></li>
+                            <li class="hover:text-subPurple mb-2"><a href="">Hornstrandir</a></li>
+                            <li class="hover:text-subPurple mb-2"><a href="">Skaftafell</a></li>
+                            <li class="hover:text-subPurple mb-6"><a href="">Ásbyrgi Canyon</a></li>
+                        </ul>
+
+                        <!-- ham menu - Accordion 2 -->
+                        <h4 class="text-subPurple mb-3">
+                            <a href="" class="group">Sightseeing</a>
+                        </h4>
+                        <ul class="text-gray-600 font-mono">
+                            <li class="hover:text-subPurple mb-2"><a href="">Boat Tour</a></li>
+                            <li class="hover:text-subPurple mb-2"><a href="">Nature Reserve Tour</a></li>
+                            <li class="hover:text-subPurple mb-2"><a href="">Ecotourism</a></li>
+                            <li class="hover:text-subPurple mb-6"><a href="">Culture Tour</a></li>
+                        </ul>
+
+                        <!-- ham menu - Accordion 3 -->
+                        <h4 class="font-semibold text-subPurple mb-3">
+                            <a href="" class="group">Outdoor Sports</a>
+                        </h4>
+                        <ul class="text-gray-600 font-mono">
+                            <li class="hover:text-subPurple mb-2"><a href="">Skiing and Snowboarding</a></li>
+                            <li class="hover:text-subPurple mb-2"><a href="">Kayaking</a></li>
+                            <li class="hover:text-subPurple mb-6"><a href="">Horseback Riding</a></li>
+                        </ul>
+
+                        <!-- ham menu - Accordion 4 -->
+                        <h4 class="font-semibold text-gray-800 mb-3">
+                            <a href="" class="group text-subPurple">Festival</a>
+                        </h4>
+                        <ul class="text-gray-600 font-mono">
+                            <li class="hover:text-subPurple mb-2"><a href="">Reykjavík Culture Night</a></li>
+                            <li class="hover:text-subPurple mb-2"><a href="">Iceland Airwaves</a></li>
+                            <li class="hover:text-subPurple mb-2"><a href="">The Great Fish Day</a></li>
+                            <li class="hover:text-subPurple mb-6"><a href="">Winter Lights Festival</a></li>
+                        </ul>
+
+                    </div>
+
                     <a href="./shop.html"
-                        class="block border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-800 font-medium hover:text-subPurple active:opacity-60">FAQ</a>
+                        class="block border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 ps-3 pe-4 text-gray-800 font-medium hover:text-subPurple active:opacity-60">FAQ</a>
                     <a href=""
-                        class="block border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 pl-3 pr-4 text-gray-800 font-medium hover:text-subPurple active:opacity-60">Contact
+                        class="block border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 ps-3 pe-4 text-gray-800 font-medium hover:text-subPurple active:opacity-60">Contact
                         us</a>
                 </div>
             </div>
@@ -105,12 +153,13 @@
                 class="absolute inset-x-0 top-0 -z-10 bg-lightGray pt-14 shadow-lg ring-1 ring-gray-900/5">
                 <div
                     class="grid grid-cols-1 gap-2  py-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-0 sm:py-10 lg:grid-cols-4 lg:gap-4 mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
+
+                    <!-- flyout menu-1 -->
                     <div class="relative -mx-3 flex gap-6 rounded-lg p-3 text-sm/6 sm:flex-col sm:p-6">
-                        <!-- flyout menu-1 -->
                         <div>
                             <h4 class="font-semibold text-gray-800 mb-3">
                                 <a href="" class="group">Hiking&nbsp;&nbsp;&nbsp;<span class="group-hover:ms-[5px]"><i
-                                            class="fa-solid fa-chevron-right"></i></span></i></a>
+                                            class="fa-solid fa-chevron-right"></i></span></a>
                             </h4>
                             <ul class="text-gray-600 font-mono">
                                 <li class="hover:text-subPurple"><a href="">Laugavegur</a></li>
@@ -119,14 +168,17 @@
                                 <li class="hover:text-subPurple"><a href="">Ásbyrgi Canyon</a></li>
                             </ul>
                         </div>
+
                     </div>
+
+                    <!-- flyout menu-2 -->
                     <div class="relative -mx-3 flex gap-6 rounded-lg p-3 text-sm/6 sm:flex-col sm:p-6">
-                        <!-- flyout menu-2 -->
+
                         <div>
                             <h4 class="font-semibold text-gray-800 mb-3">
                                 <a href="" class="group">Sightseeing&nbsp;&nbsp;&nbsp;<span
                                         class="group-hover:ms-[5px]"><i
-                                            class="fa-solid fa-chevron-right"></i></span></i></a>
+                                            class="fa-solid fa-chevron-right"></i></span></a>
                             </h4>
                             <ul class="text-gray-600 font-mono">
                                 <li class="hover:text-subPurple"><a href="">Boat Tour</a></li>
@@ -136,13 +188,14 @@
                             </ul>
                         </div>
                     </div>
+
+                    <!-- flyout menu-3 -->
                     <div class="relative -mx-3 flex gap-6 rounded-lg p-3 text-sm/6 sm:flex-col sm:p-6">
-                        <!-- flyout menu-3 -->
                         <div>
                             <h4 class="font-semibold text-gray-800 mb-3">
                                 <a href="" class="group">Outdoor Sports&nbsp;&nbsp;&nbsp;<span
                                         class="group-hover:ms-[5px]"><i
-                                            class="fa-solid fa-chevron-right"></i></span></i></a>
+                                            class="fa-solid fa-chevron-right"></i></span></a>
                             </h4>
                             <ul class="text-gray-600 font-mono">
                                 <li class="hover:text-subPurple"><a href="">Skiing and Snowboarding</a></li>
@@ -151,12 +204,13 @@
                             </ul>
                         </div>
                     </div>
+
+                    <!-- flyout menu-4 -->
                     <div class="relative -mx-3 flex gap-6 rounded-lg p-3 text-sm/6 sm:flex-col sm:p-6">
-                        <!-- flyout menu-3 -->
                         <div>
                             <h4 class="font-semibold text-gray-800 mb-3">
                                 <a href="" class="group">Festival&nbsp;&nbsp;&nbsp;<span class="group-hover:ms-[5px]"><i
-                                            class="fa-solid fa-chevron-right"></i></span></i></a>
+                                            class="fa-solid fa-chevron-right"></i></span></a>
                             </h4>
                             <ul class="text-gray-600 font-mono">
                                 <li class="hover:text-subPurple"><a href="">Reykjavík Culture Night</a></li>
@@ -171,10 +225,9 @@
             </div>
 
         </nav>
-
         <!-- Swiper -->
-        <section
-            class="swiper bannerSwiper w-screen h-[300px] md:h-[450px] lg:h-[600px] flex justify-center items-center mt-[80px]">
+        <section id="bannerSwiper"
+            class="swiper w-screen h-[300px] md:h-[450px] lg:h-[600px] flex justify-center items-center mt-[80px]">
             <div class="swiper-wrapper w-full h-full">
 
                 <!-- swiper-1-area -->
@@ -215,7 +268,7 @@
 
                 <!-- swiper-3-area -->
                 <div
-                    class="swiper-slide w-full h-full bg-swiper-2-sm md:bg-swiper-2 bg-cover bg-no-repeat grid grid-row-12 p-8 md:p-14 lg:p-20">
+                    class="swiper-slide w-full h-full bg-swiper-3-sm md:bg-swiper-3 bg-cover bg-no-repeat grid grid-row-12 p-8 md:p-14 lg:p-20">
                     <h2
                         class="text-3xl md:text-5xl row-span-6 lg:text-7xl text-mainYellow mb-3 md:mb-5 lg:mb-8 relative">
                         Námafjall
@@ -234,23 +287,65 @@
             </div>
         </section>
     </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         //nav 點開漢堡標選單
         const hamBtn = document.querySelector('#hamBtn');
         const mobileMenu = document.querySelector('#mobile-menu');
+        const navBar = document.querySelector('#navBar')
 
         mobileMenu.style.display = 'none';
 
         hamBtn.addEventListener('click', function () {
+            navBar.classList.remove('bg-white/50');
+            navBar.classList.add('bg-lightGray');
+
             if (mobileMenu.style.display === 'none') {
                 mobileMenu.style.display = 'block';
             } else if (mobileMenu.style.display === 'block') {
                 mobileMenu.style.display = 'none';
             }
+        });
+
+        // ham-menu accordion 手風琴
+        const accordionBtn = document.querySelector('#accordionBtn');
+        const accordionContext = document.querySelector('#accordionContext');
+        const plusIcon = document.querySelector('#plusIcon');
+        const plus = `<i class="fa-solid fa-plus"></i>`;
+        const minus = `<i class="fa-solid fa-minus"></i>`;
+
+
+
+        accordionBtn.addEventListener('click', function () {
+            // 切換 accordionContext 的顯示/隱藏狀態
+            function showAccordion(result) {
+                accordionContext.style.display = result ? 'block' : 'none';
+            }
+
+            // 判斷當前 display 狀態
+            if (accordionContext.style.display === 'none' || accordionContext.style.display === '') {
+                // 當前隱藏 -> 展開
+                showAccordion(true);
+                plusIcon.innerHTML = minus;
+            } else {
+                // 當前顯示 -> 收起
+                showAccordion(false);
+                plusIcon.innerHTML = plus;
+            }
+
         })
 
-        const swiper = new Swiper(".bannerSwiper", {
+        // banner 輪播效果
+        const swiper = new Swiper('#bannerSwiper', {
             slidesPerView: 1,
             spaceBetween: 0,
             speed: 1000,
@@ -261,17 +356,13 @@
             loop: true,
         });
 
-        //滑鼠移入：暫停輪播
-        // document.querySelector('.bannerSwiper').addEventListener('mouseenter', function () {
-        //     swiper.autoplay.stop();
-        // });
+        // 點擊 banner 跳轉到下一張圖
+        document.querySelector('#bannerSwiper').addEventListener('click', function () {
+            swiper.slideNext();
+            swiper.autoplay.start(); // 恢復自動輪播
+        })
 
-        //滑鼠移出：繼續輪播
-        // document.querySelector('.bannerSwiper').addEventListener('mouseleave', function () {
-        //     swiper.autoplay.start();
-        // });
-
-        //'Booking':hover -> 展開flyout menu
+        //'bookingBtn' 或 'flyoutMenu' => hover：展開 flyout menu
         const bookingBtn = document.querySelector('#booking');
         const flyoutMenu = document.querySelector('#flyoutMenu');
         flyoutMenu.style.display = 'none';
@@ -282,8 +373,6 @@
 
         [bookingBtn, flyoutMenu].forEach(element => {
             element.addEventListener('mouseover', function () { showOrHide(true) });
-            // element.addEventListener('mouseout', function () { showOrHide(false) });
-
         });
 
         flyoutMenu.addEventListener('mouseout', function () { showOrHide(false) });

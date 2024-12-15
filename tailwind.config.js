@@ -39,7 +39,9 @@ module.exports = {
           to: { transform: 'translateX(-50%)' },
         }
       },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 },
 }
 }
