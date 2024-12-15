@@ -88,14 +88,15 @@
 
             <!-- Mobile ham menu -->
             <div class="sm:hidden" id="mobile-menu">
-                <div class="space-y-1 pb-5 bg-lightGray">
+                <div class="space-y-1 pb-5 bg-lightGray max-h-screen overflow-y-auto">
 
                     <p id="accordionBtn"
                         class="block cursor-pointer border-l-4 hover:border-mainYellow hover:bg-gray-50 py-2 ps-3 pe-4 text-gray-800 font-medium hover:text-subPurple active:opacity-60">
                         Booking&nbsp;&nbsp;<span id="plusIcon"><i class="fa-solid fa-plus"></i></span></p>
 
-                    <div id="accordionContext" class="hidden ps-8 py-2 max-h-72 overflow-y-auto">
-                        <!-- ham menu - Accordion 1 -->
+                    <!-- ham menu accordion all -->
+                    <div id="accordionContext" class="hidden ps-8 py-2 max-h-full overflow-y-auto">
+                        <!-- ham menu - accordion 1 -->
                         <h4 class="text-subPurple mb-3">
                             <a href="" class="group">Hiking</a>
                         </h4>
@@ -106,7 +107,7 @@
                             <li class="hover:text-subPurple mb-6"><a href="">Ásbyrgi Canyon</a></li>
                         </ul>
 
-                        <!-- ham menu - Accordion 2 -->
+                        <!-- ham menu - accordion 2 -->
                         <h4 class="text-subPurple mb-3">
                             <a href="" class="group">Sightseeing</a>
                         </h4>
@@ -117,7 +118,7 @@
                             <li class="hover:text-subPurple mb-6"><a href="">Culture Tour</a></li>
                         </ul>
 
-                        <!-- ham menu - Accordion 3 -->
+                        <!-- ham menu - accordion 3 -->
                         <h4 class="font-semibold text-subPurple mb-3">
                             <a href="" class="group">Outdoor Sports</a>
                         </h4>
@@ -127,7 +128,7 @@
                             <li class="hover:text-subPurple mb-6"><a href="">Horseback Riding</a></li>
                         </ul>
 
-                        <!-- ham menu - Accordion 4 -->
+                        <!-- ham menu - accordion 4 -->
                         <h4 class="font-semibold text-gray-800 mb-3">
                             <a href="" class="group text-subPurple">Festival</a>
                         </h4>
@@ -323,28 +324,23 @@
         const plus = `<i class="fa-solid fa-plus"></i>`;
         const minus = `<i class="fa-solid fa-minus"></i>`;
 
-
-
         accordionBtn.addEventListener('click', function () {
-            // 切換 accordionContext 的顯示/隱藏狀態
             function showAccordion(result) {
                 accordionContext.style.display = result ? 'block' : 'none';
             }
 
-            // 判斷當前 display 狀態
             if (accordionContext.style.display === 'none' || accordionContext.style.display === '') {
-                // 當前隱藏 -> 展開
+                // 收起 -> 展開
                 showAccordion(true);
                 plusIcon.innerHTML = minus;
             } else {
-                // 當前顯示 -> 收起
+                // 展開 -> 收起
                 showAccordion(false);
                 plusIcon.innerHTML = plus;
             }
-
         })
 
-        // banner 輪播效果
+        // banner 輪播
         const swiper = new Swiper('#bannerSwiper', {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -362,7 +358,7 @@
             swiper.autoplay.start(); // 恢復自動輪播
         })
 
-        //'bookingBtn' 或 'flyoutMenu' => hover：展開 flyout menu
+        // flyout menu
         const bookingBtn = document.querySelector('#booking');
         const flyoutMenu = document.querySelector('#flyoutMenu');
         flyoutMenu.style.display = 'none';
