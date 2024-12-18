@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="icon" href="./src/img/logo.png">
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+    <script>
+        function addToCart(item) {
+            // 找到是否已經存在這個商品
+            let existingItem = cartItems.find(cartItem => cartItem.title === item.title);
+
+            if (existingItem) {
+                // 更新已有商品的數量和價格
+                existingItem.quantity++;
+                existingItem.price = parseFloat(existingItem.price * existingItem.quantity).toFixed(2);
+            } else {
+                // 如果商品不在購物車中，則加入新商品
+                cartItems.push({ ...item, quantity: 1 });
+            }
+
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const cartTemplate = document.querySelector('#cartTemplate');
+            const cartContainer = document.querySelector('#cartContainer');
+
+            // 清空原有的購物車內容
+            cartContainer.innerHTML = '';
+
+            // 遍歷購物車中的所有商品，並更新 UI
+            cartItems.forEach(cartItem => {
+                const cartItemClone = cartTemplate.content.cloneNode(true);
+
+                cartItemClone.querySelector('#cartImg').src = cartItem.img;
+                cartItemClone.querySelector('#cartTitle').textContent = cartItem.title;
+                cartItemClone.querySelector('#cartBrief').textContent = cartItem.brief;
+                cartItemClone.querySelector('#cartItemPrice').textContent = cartItem.price;
+
+                // 將更新後的元素添加到購物車容器中
+                cartContainer.appendChild(cartItemClone);
+            });
+        }
+
+    </script>
+</body>
+
+</html>
