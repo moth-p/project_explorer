@@ -367,12 +367,13 @@
                                             <div class="flex items-center sm:block sm:flex-none sm:text-center">
                                                 <div class="flex justify-center items-center mb-2 gap-1">
                                                     <button id="cartMinusBtn"
-                                                        class="flex justify-center items-center w-8 h-8 border-2 rounded-md text-gray-800 hover:bg-subPurple hover:text-lightGray active:opacity-50"><i class="fa-solid fa-minus"></i></button>
+                                                        class="flex justify-center items-center w-8 h-8 border-2 rounded-md text-gray-800 hover:bg-subPurple hover:text-lightGray active:opacity-50"><i
+                                                            class="fa-solid fa-minus"></i></button>
                                                     <input id="cartQuantity" type="number"
                                                         class="no-spinner w-12 h-8 border-2 text-center " value="1">
                                                     <button id="cartPlusBtn"
                                                         class="flex justify-center items-center w-8 h-8 border-2 rounded-md hover:bg-subPurple hover:text-lightGray active:opacity-50"><i
-                                                        class="fa-solid fa-plus"></i></button>
+                                                            class="fa-solid fa-plus"></i></button>
                                                 </div>
 
                                                 <button id="cartRemoveBtn" type="button"
@@ -401,7 +402,8 @@
                                                 <dt class="text-gray-400">Tax&nbsp;&nbsp;&nbsp;<span
                                                         class="text-subPurple text-[16px] hover:opacity-50 cursor-pointer"><i
                                                             class="fa-solid fa-circle-question"></i></span></dt>
-                                                <dd id="cartTax" class="font-medium text-gray-400">€&nbsp;<span>0.00</span></dd>
+                                                <dd id="cartTax" class="font-medium text-gray-400">
+                                                    €&nbsp;<span>0.00</span></dd>
                                             </div>
                                             <div class="flex items-center justify-between py-4">
                                                 <dt class="text-base font-medium text-gray-800">Order total</dt>
@@ -424,7 +426,7 @@
             </div>
         </div>
 
-        <!-- 商品區 標題 -->
+        <!-- product cards -->
         <div class="sm:px-12 lg:px-60">
             <div class="mx-auto max-w-2xl px-4 py-10 sm:py-14 sm:px-6 lg:max-w-5xl lg:px-8">
                 <h2 class="text-2xl md:text-4xl text-gray-800 flex justify-center">
@@ -434,7 +436,7 @@
                 <br>
                 <hr><br><br>
 
-                <!-- 商品卡片區 使用template模板生成 -->
+                <!-- 商品card區 使用template模板生成 -->
                 <div id="productContainer"
                     class="grid gap-y-4 grid-cols-2 gap-x-2 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-4 lg:gap-x-8 mb-20">
                     <template id="productTemplate">
@@ -448,17 +450,17 @@
                                 <h3 id="productTitle"
                                     class="break-words text-wrap text-sm font-sans font-medium text-gray-800 mb-2"></h3>
                                 <div class="flex flex-1 flex-col justify-end">
-                                    <p 
-                                        class="break-words text-wrap text-md font-sans font-medium text-gray-800 mb-2">€&nbsp;<span id="productPrice"></span>
+                                    <p class="break-words text-wrap text-md font-sans font-medium text-gray-800 mb-2">
+                                        €&nbsp;<span id="productPrice"></span>
                                     </p>
                                     <p id="productBrief"
                                         class="text-[12px] break-words text-wrap text-sm font-mono text-gray-400">
                                     </p>
                                 </div>
                             </div>
-                            <button id="addToCartBtn" type="button" title="add to cart"
+                            <!-- <button id="addToCartBtn" type="button" title="add to cart"
                                 class="absolute bottom-5 right-4 w-8 h-8 border-2 shadow-sm text-subPurple hover:bg-subPurple hover:text-lightGray active:opacity-50 rounded-md flex justify-center items-center p-3"><i
-                                    class="fa-solid fa-plus"></i></button>
+                                    class="fa-solid fa-plus"></i></button> -->
                         </div>
                     </template>
                 </div>
@@ -506,7 +508,6 @@
                 </div>
             </div>
         </div>
-
     </main>
 
     <footer class="bg-gray-400 text-lightGray">
@@ -539,7 +540,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./shop.js"></script>
+    <script src="./src/js/shop.js"></script>
 
 </body>
 
