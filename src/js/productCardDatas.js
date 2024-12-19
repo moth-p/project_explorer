@@ -58,7 +58,7 @@ const products = [
     {
         img: './src/img/product-img-6.png',
         imgBig:'./src/img/product-big-img-6.png',
-        title: 'Mývatn Geothermal and Nature Reserve Tour',
+        title: 'Mývatn Geothermal Tour',
         price: 200,
         brief: 'North',
         briefLong: 'Mývatn Geothermal and Nature Reserve, located in northeastern Iceland, is a geothermal paradise known for its unique volcanic landscapes, bubbling mud pools, and diverse birdlife, especially during the summer months.',
@@ -157,7 +157,10 @@ products.forEach((item) => {
 
 })
 
-const saveProducts = JSON.stringify(products);
-localStorage.setItem('products', saveProducts);
+// const saveProducts = JSON.stringify(products);
+// localStorage.setItem('products', saveProducts);
 
-let cartItems = JSON.parse(localStorage.getItem('products'));
+// let cartItems = JSON.parse(localStorage.getItem('products'));
+
+
+

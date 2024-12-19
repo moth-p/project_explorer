@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        #detailsTitle {
+            line-height: 50px;
+        }
+    </style>
 
 </head>
 
@@ -71,10 +76,14 @@
                             </p>
 
                             <!-- cart icon -->
-                            <a type="button" id="cartIcon" class="absolute top-4 right-[40px] md:right-[50px]">
+                            <a type="button" id="cartIcon" class="absolute  top-4 right-[40px] md:right-[50px]">
                                 <button type="button"
-                                    class="w-10 h-10 rounded-full text-gray-800 hover:text-subPurple hover:bg-lightGray active:opacity-60">
+                                    class="relative w-10 h-10 rounded-full text-gray-800 hover:text-subPurple hover:bg-lightGray active:opacity-60">
                                     <i class="fa-solid fa-cart-shopping"></i>
+                                    <div id="cartAlert"
+                                        class="invisible absolute top-0 left-6 p-2 font-sans text-[12px] flex justify-center items-center bg-red-500 text-lightGray w-5 h-5 rounded-full">
+                                        <span id="cartAlertQuantity">1</span>
+                                    </div>
                                 </button>
                             </a>
 
@@ -289,59 +298,61 @@
                                                 </button>
                                             </div>
 
-                                            <div id="cartEmpty"
+                                            <!-- <div id="cartEmpty"
                                                 class="w-80 h-80 text-gray-400 text-wrap break-words flex justify-center items-center text-2xl">
                                                 <p class="absolute top-32 left-20 md:top-44 md:left-64">Cart is empty.
                                                 </p>
-                                            </div>
+                                            </div> -->
 
                                             <section id="cartContainer" aria-labelledby="cart-heading">
-                                                <div id="cartTemplate" role="list"
-                                                    class="hidden divide-y divide-gray-200 px-4 sm:px-6 lg:px-8">
-                                                    <li class="flex py-8 text-sm sm:items-center">
-                                                        <img id="cartImg" src="" alt=""
-                                                            class="size-24 flex-none rounded-lg border border-gray-200 sm:size-32">
-                                                        <div
-                                                            class="font ml-4 grid flex-auto grid-cols-1 grid-rows-1 items-start gap-x-5 gap-y-3 sm:ml-6 sm:flex sm:items-center sm:gap-0">
-                                                            <div class="row-end-1 flex-auto sm:pr-6">
-                                                                <h3 class="text-md text-gray-900">
-                                                                    <a id="cartTitle" href="#"></a>
-                                                                </h3>
-                                                                <p id="cartBrief"
-                                                                    class="mt-1 text-[14px] font-sans text-gray-400">
-                                                                </p>
-                                                            </div>
-                                                            <p
-                                                                class="row-span-2 row-end-2 text-md text-gray-800 sm:order-1 sm:ml-6 sm:w-1/3 sm:flex-none sm:text-right">
-                                                                €&nbsp;<span id="cartPrice">150</span></p>
+                                                <div id="cartTemplate">
+                                                    <div class="divide-y divide-gray-200 px-4 sm:px-6 lg:px-8">
+                                                        <li class="flex py-8 text-sm sm:items-center">
+                                                            <img id="cartImg" src="./src/img/product-img-5.png" alt=""
+                                                                class="size-24 flex-none rounded-lg border border-gray-200 sm:size-32">
                                                             <div
-                                                                class="flex items-center sm:block sm:flex-none sm:text-center">
-                                                                <div
-                                                                    class="flex justify-center items-center mb-2 gap-1">
-                                                                    <button id="cartMinusBtn"
-                                                                        class="flex justify-center items-center w-8 h-8 border-2 rounded-md text-gray-800 hover:bg-subPurple hover:text-lightGray active:opacity-50"><i
-                                                                            class="fa-solid fa-minus"></i></button>
-                                                                    <input id="cartQuantity" type="number"
-                                                                        class="no-spinner w-12 h-8 border-2 text-center "
-                                                                        value="1">
-                                                                    <button id="cartPlusBtn"
-                                                                        class="flex justify-center items-center w-8 h-8 border-2 rounded-md hover:bg-subPurple hover:text-lightGray active:opacity-50"><i
-                                                                            class="fa-solid fa-plus"></i></button>
+                                                                class="font ml-4 grid flex-auto grid-cols-1 grid-rows-1 items-start gap-x-5 gap-y-3 sm:ml-6 sm:flex sm:items-center sm:gap-0">
+                                                                <div class="row-end-1 flex-auto sm:pr-6">
+                                                                    <h3 class="text-md text-gray-900">
+                                                                        <a id="cartTitle" href="#">Jökulsárlón Glacier
+                                                                            Lagoon Boat Tour</a>
+                                                                    </h3>
+                                                                    <p id="cartBrief"
+                                                                        class="mt-1 text-[14px] font-sans text-gray-400">
+                                                                        North
+                                                                    </p>
                                                                 </div>
+                                                                <p
+                                                                    class="row-span-2 row-end-2 text-md text-gray-800 sm:order-1 sm:ml-6 sm:w-1/3 sm:flex-none sm:text-right">
+                                                                    €&nbsp;<span id="cartPrice">350</span></p>
+                                                                <div
+                                                                    class="flex items-center sm:block sm:flex-none sm:text-center">
+                                                                    <div
+                                                                        class="flex justify-center items-center mb-2 gap-1">
+                                                                        <button id="cartMinusBtn"
+                                                                            class="flex justify-center items-center w-8 h-8 border-2 rounded-md text-gray-800 hover:bg-subPurple hover:text-lightGray active:opacity-50"><i
+                                                                                class="fa-solid fa-minus"></i></button>
+                                                                        <input id="cartQuantity" type="number"
+                                                                            class="no-spinner w-12 h-8 border-2 text-center "
+                                                                            value="1">
+                                                                        <button id="cartPlusBtn"
+                                                                            class="flex justify-center items-center w-8 h-8 border-2 rounded-md hover:bg-subPurple hover:text-lightGray active:opacity-50"><i
+                                                                                class="fa-solid fa-plus"></i></button>
+                                                                    </div>
 
-                                                                <button id="cartRemoveBtn" type="button"
-                                                                    class="ml-4 text-[10px] text-subPurple hover:opacity-50 sm:ml-0 sm:mt-2">
-                                                                    <span>Remove</span>
-                                                                </button>
+                                                                    <button id="cartRemoveBtn" type="button"
+                                                                        class="ml-4 text-[10px] text-subPurple hover:opacity-50 sm:ml-0 sm:mt-2">
+                                                                        <span>Remove</span>
+                                                                    </button>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </li>
-                                                    <hr><br>
-                                                    </ㄎ>
+                                                        </li>
+                                                        <hr><br>
+                                                    </div>
+                                                </div>
                                             </section>
 
-                                            <section aria-labelledby="summary-heading"
-                                                class="hidden mt-auto sm:px-6 lg:px-8">
+                                            <section aria-labelledby="summary-heading" class="mt-auto sm:px-6 lg:px-8">
                                                 <div class="bg-gray-50 p-6 sm:rounded-lg sm:p-8">
                                                     <h2 id="summary-heading" class="sr-only">Order summary</h2>
 
@@ -350,7 +361,7 @@
                                                             <div class="flex items-center justify-between py-4">
                                                                 <dt class="text-gray-400">Subtotal</dt>
                                                                 <dd id="cartSubtotal" class="font-medium text-gray-400">
-                                                                    €&nbsp;<span class="cartSubtotal">150</span></dd>
+                                                                    €&nbsp;<span class="cartSubtotal">350</span></dd>
                                                             </div>
                                                             <div class="flex items-center justify-between py-4">
                                                                 <dt class="text-gray-400">Tax&nbsp;&nbsp;&nbsp;<span
@@ -366,7 +377,7 @@
                                                                 </dt>
                                                                 <dd id="cartOrderTotal"
                                                                     class="text-base font-medium text-gray-800">
-                                                                    €&nbsp;<span class="cartOrderTotal">150.3</span>
+                                                                    €&nbsp;<span class="cartOrderTotal">350.00</span>
                                                                 </dd>
                                                             </div>
                                                         </dl>
@@ -391,7 +402,7 @@
     </header>
 
     <main>
-        <div>
+        <div class="leading-loose">
             <div
                 class="font-krona mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                 <!-- Product details -->
@@ -409,20 +420,20 @@
                             </li>
                             <li>
                                 <div class="flex items-center text-sm">
-                                    <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Guide</a>
+                                    <a href="#" class="font-medium text-gray-500 hover:text-gray-800">Guide</a>
                                 </div>
                             </li>
                         </ol>
                     </nav>
 
-                    <div class="mt-4">
-                        <h1 id="detailsTitle" class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"></h1>
+                    <div class="mt-5 break-words text-wrap">
+                        <h1 id="detailsTitle" class="text-3xl font-bold text-gray-800 sm:text-4xl"></h1>
                     </div>
 
                     <section aria-labelledby="information-heading" class="mt-4">
 
                         <div class="flex items-center font-sans font-medium">
-                            <p class="text-lg text-gray-900 sm:text-xl">€&nbsp;<span id="detailsPrice"></span></p>
+                            <p class="text-lg text-gray-800 sm:text-xl">€&nbsp;<span id="detailsPrice"></span></p>
 
                             <div class="ml-4 border-l border-gray-300 pl-4">
                                 <h2 class="sr-only">Reviews</h2>
@@ -467,7 +478,7 @@
                             </div>
                         </div>
 
-                        <div class="mt-4 space-y-6">
+                        <div class="mt-4 space-y-6 break-words text-wrap">
                             <p id="detailsBrief" class="font-sans text-gray-500"></p>
                         </div>
                         <div>
@@ -535,7 +546,7 @@
 
         <!--product detail description below 商品詳情頁 下方商品說明 -->
         <section>
-            <div>
+            <div class="leading-loose">
                 <div class="mx-auto max-w-7xl px-14 lg:pt-4 pb-40">
                     <div class="flex justify-center items-center text-subPurple text-5xl mb-12"><i
                             class="fa-solid fa-volcano"></i></div>
@@ -754,14 +765,37 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./src/js/navShop.js"></script>
-    <script src="./src/js/productsGet.js"></script>
+    <script src="./src/js/productCardDatas.js"></script>
 
     <script>
-        // date || group size 欄位必填
-        const datePicker = document.querySelector('#datePicker');
+        const addToCart = document.querySelector('#addToCart');
         const groupSizeInput = document.querySelector('#groupSizeInput');
 
+        // date picker by flatpickr
+        const datePicker = flatpickr("#datePicker", {
+            altInput: true,
+            altFormat: "F j, Y",
+            dateFormat: "Y-m-d",
+        });
+
+
+
+        // 增加商品到購物車中
+        // const saveProducts = JSON.stringify(products);
+        // localStorage.setItem('products', saveProducts);
+
+        // let cartItems = JSON.parse(localStorage.getItem('products'));
+
+        const cartTitle = document.querySelector('#cartTitle');
+        const cartBrief = document.querySelector('#cartBrief');
+        const cartPrice = document.querySelector('#cartPrice');
+        const cartQuantity = document.querySelector('#cartQuantity');
+        const cartsubTotal = document.querySelector('#cartsubTotal');
+        const cartOrderTotal = document.querySelector('#cartOrderTotal');
+        const cartAlert = document.querySelector('#cartAlert');
+
         addToCartBtn.addEventListener('click', () => {
+            // date || group size 欄位必填
             if (datePicker.value === '' || groupSizeInput.value === '' || groupSizeInput.value <= 0) {
                 Swal.fire({
                     title: "The Date and Group Size must be filled out.",
@@ -782,7 +816,6 @@
                         }
                     },
                 });
-
                 return;
             }
 
@@ -807,10 +840,8 @@
                         }
                     },
                 });
-
                 return;
             }
-
 
             Swal.fire({
                 title: "Add to cart successfully!",
@@ -836,16 +867,10 @@
 
             datePicker.clear();
             groupSizeInput.value = '';
+            cartAlert.style.visibility = 'visible';
 
-
-        })
-
-        // date picker by flatpickr
-        flatpickr("#datePicker", {
-            altInput: true,
-            altFormat: "F j, Y",
-            dateFormat: "Y-m-d",
         });
+
 
         // 解析 URL 的查詢字串
         const urlParams = new URLSearchParams(window.location.search);
@@ -862,7 +887,6 @@
             document.title = productTitle; // 更新 <title>
             document.querySelector('.product-title').textContent = productTitle; // 更新頁面標題
         }
-
 
     </script>
 </body>
