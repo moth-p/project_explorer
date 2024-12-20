@@ -306,14 +306,14 @@
                                                 <template id="cartTemplate">
                                                     <div class="px-8">
                                                         <div class="divide-y divide-gray-200 px-4 sm:px-6 lg:px-8">
-                                                            <li class="flex py-8 text-sm sm:items-center">
+                                                            <li class="flex px-3 py-8 text-sm sm:items-center">
                                                                 <img id="cartImg" src="./src/img/product-img-5.png"
                                                                     alt=""
                                                                     class="size-24 flex-none rounded-lg border border-gray-200 sm:size-32">
                                                                 <div
-                                                                    class="font ml-4 grid flex-auto grid-cols-1 grid-rows-1 items-start gap-x-5 gap-y-3 sm:ml-6 sm:flex sm:items-center sm:gap-0">
-                                                                    <div class="row-end-1 flex-auto sm:pr-6">
-                                                                        <h3 class="text-md text-gray-900">
+                                                                    class="font ml-4 grid flex-auto grid-rows-1 items-start gap-x-5 gap-y-3 sm:ml-6 sm:flex sm:items-center sm:gap-0">
+                                                                    <div class="row-end-1 col-span-8 flex-auto sm:ps-4">
+                                                                        <h3 class="text-md text-gray-900 mb-3">
                                                                             <a id="cartTitle" href="#"></a>
                                                                         </h3>
                                                                         <p
@@ -321,10 +321,17 @@
                                                                             Date:&nbsp;<span id="cartBrief"></span>
                                                                         </p>
                                                                     </div>
-                                                                    <p
-                                                                        class="row-span-2 row-end-2 text-md text-gray-800 sm:order-1 sm:ml-6 sm:w-1/3 sm:flex-none sm:text-right">
-                                                                        €&nbsp;<span id="cartPrice"></span></p>
-                                                                    <div
+                                                                    <div class="flex-col items-end sm:items-center sm:block sm:flex-none sm:text-center">
+                                                                        <p
+                                                                            class="text-md text-gray-800">
+                                                                            €&nbsp;<span id="cartPrice"></span></p>
+                                                                        <button id="cartRemoveBtn" type="button"
+                                                                            class="text-[10px] text-subPurple hover:opacity-50">
+                                                                            <span>Remove</span>
+                                                                        </button>
+                                                                    </div>
+
+                                                                    <!-- <div
                                                                         class="flex items-center sm:block sm:flex-none sm:text-center">
                                                                         <div
                                                                             class="flex justify-center items-center mb-2 gap-1">
@@ -337,13 +344,8 @@
                                                                             <button id="cartPlusBtn"
                                                                                 class="flex justify-center items-center w-8 h-8 border-2 rounded-md hover:bg-subPurple hover:text-lightGray active:opacity-50"><i
                                                                                     class="fa-solid fa-plus"></i></button>
-                                                                        </div>
-
-                                                                        <button id="cartRemoveBtn" type="button"
-                                                                            class="ml-4 text-[10px] text-subPurple hover:opacity-50 sm:ml-0 sm:mt-2">
-                                                                            <span>Remove</span>
-                                                                        </button>
-                                                                    </div>
+                                                                        </div> 
+                                                                    </div> -->
                                                                 </div>
                                                             </li>
                                                             <hr><br>
@@ -362,7 +364,8 @@
                                                                         </div>
                                                                         <div
                                                                             class="flex items-center justify-between py-4">
-                                                                            <dt class="text-gray-400">
+                                                                            <dt title="More information"
+                                                                                class="text-gray-400">
                                                                                 Tax&nbsp;&nbsp;&nbsp;<span
                                                                                     class="text-subPurple text-[16px] hover:opacity-50 cursor-pointer"><i
                                                                                         class="fa-solid fa-circle-question"></i></span>
@@ -510,7 +513,7 @@
                                         placeholder="Select a date"></p>
                                 <!-- 人數 -->
                                 <p class="font-sans text-md">Group Size:&nbsp;&nbsp;<input required id="groupSizeInput"
-                                        type="number" min="1" max="8" placeholder="1"
+                                        type="number" min="1" max="8" placeholder="2"
                                         class="font-sans p-2 w-20 h-8 border rounded-md focus:outline-none focus:ring-2 focus:ring-subPurple">&nbsp;&nbsp;people
                                 </p>
                             </div>
@@ -756,13 +759,11 @@
                                     </ol>
                                 </dd>
                             </div>
-
                             <!-- More questions... -->
                         </dl>
                     </div>
                 </div>
             </div>
-
         </section>
 
     </main>
@@ -794,6 +795,7 @@
         const addToCart = document.querySelector('#addToCart');
         const groupSizeInput = document.querySelector('#groupSizeInput');
         let selectedDateStr = '';
+        let disabledDates = [];
 
         // 計算今天 +14 天的日期
         function getStartDay() {
@@ -809,6 +811,7 @@
             altInput: true,
             altFormat: "F j, Y",
             dateFormat: "Y-m-d",
+            disable: disabledDates,
             onChange: function (selectedDates, dateStr, instance) {
                 // `selectedDates` 是一個日期陣列，包含選中的日期物件
                 // `dateStr` 是格式化的日期字串
@@ -897,16 +900,22 @@
 
             cloneCart.querySelector('#cartTitle').textContent = product.title;
             cloneCart.querySelector('#cartImg').src = product.img;
-            cloneCart.querySelector('#cartBrief').textContent = selectedDateStr;
+            cloneCart.querySelector('#cartBrief').textContent = `${selectedDateStr} / Group Size: ${groupSizeInput.value} `;
             cloneCart.querySelector('#cartPrice').textContent = product.price;
             cloneCart.querySelector('#cartSubtotal').textContent = product.price;
-            cloneCart.querySelector('#cartQuantity').textContent = product.quantity;
+            // cloneCart.querySelector('#cartQuantity').textContent = product.quantity;
             cloneCart.querySelector('#cartOrderTotal').textContent = product.price;
 
             cartContainer.appendChild(cloneCart);
 
+            disabledDates.push(selectedDateStr);
+            datePicker.set('disable', disabledDates);
             datePicker.clear();
+            // 禁用已選中的日期
+
+
             groupSizeInput.value = '';
+
             cartAlert.style.visibility = 'visible';
             cartEmpty.style.display = 'none';
 
