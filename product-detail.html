@@ -298,98 +298,104 @@
                                                 </button>
                                             </div>
 
-                                            <!-- <div id="cartEmpty"
-                                                class="w-80 h-80 text-gray-400 text-wrap break-words flex justify-center items-center text-2xl">
-                                                <p class="absolute top-32 left-20 md:top-44 md:left-64">Cart is empty.
-                                                </p>
-                                            </div> -->
+                                            <p id="cartEmpty"
+                                                class="w-full h-60 text-gray-400 text-2xl flex justify-center items-center">
+                                                Cart is empty.</p>
 
                                             <section id="cartContainer" aria-labelledby="cart-heading">
-                                                <div id="cartTemplate">
-                                                    <div class="divide-y divide-gray-200 px-4 sm:px-6 lg:px-8">
-                                                        <li class="flex py-8 text-sm sm:items-center">
-                                                            <img id="cartImg" src="./src/img/product-img-5.png" alt=""
-                                                                class="size-24 flex-none rounded-lg border border-gray-200 sm:size-32">
-                                                            <div
-                                                                class="font ml-4 grid flex-auto grid-cols-1 grid-rows-1 items-start gap-x-5 gap-y-3 sm:ml-6 sm:flex sm:items-center sm:gap-0">
-                                                                <div class="row-end-1 flex-auto sm:pr-6">
-                                                                    <h3 class="text-md text-gray-900">
-                                                                        <a id="cartTitle" href="#">Jökulsárlón Glacier
-                                                                            Lagoon Boat Tour</a>
-                                                                    </h3>
-                                                                    <p id="cartBrief"
-                                                                        class="mt-1 text-[14px] font-sans text-gray-400">
-                                                                        North
-                                                                    </p>
-                                                                </div>
-                                                                <p
-                                                                    class="row-span-2 row-end-2 text-md text-gray-800 sm:order-1 sm:ml-6 sm:w-1/3 sm:flex-none sm:text-right">
-                                                                    €&nbsp;<span id="cartPrice">350</span></p>
+                                                <template id="cartTemplate">
+                                                    <div class="px-8">
+                                                        <div class="divide-y divide-gray-200 px-4 sm:px-6 lg:px-8">
+                                                            <li class="flex py-8 text-sm sm:items-center">
+                                                                <img id="cartImg" src="./src/img/product-img-5.png"
+                                                                    alt=""
+                                                                    class="size-24 flex-none rounded-lg border border-gray-200 sm:size-32">
                                                                 <div
-                                                                    class="flex items-center sm:block sm:flex-none sm:text-center">
-                                                                    <div
-                                                                        class="flex justify-center items-center mb-2 gap-1">
-                                                                        <button id="cartMinusBtn"
-                                                                            class="flex justify-center items-center w-8 h-8 border-2 rounded-md text-gray-800 hover:bg-subPurple hover:text-lightGray active:opacity-50"><i
-                                                                                class="fa-solid fa-minus"></i></button>
-                                                                        <input id="cartQuantity" type="number"
-                                                                            class="no-spinner w-12 h-8 border-2 text-center "
-                                                                            value="1">
-                                                                        <button id="cartPlusBtn"
-                                                                            class="flex justify-center items-center w-8 h-8 border-2 rounded-md hover:bg-subPurple hover:text-lightGray active:opacity-50"><i
-                                                                                class="fa-solid fa-plus"></i></button>
+                                                                    class="font ml-4 grid flex-auto grid-cols-1 grid-rows-1 items-start gap-x-5 gap-y-3 sm:ml-6 sm:flex sm:items-center sm:gap-0">
+                                                                    <div class="row-end-1 flex-auto sm:pr-6">
+                                                                        <h3 class="text-md text-gray-900">
+                                                                            <a id="cartTitle" href="#"></a>
+                                                                        </h3>
+                                                                        <p
+                                                                            class="mt-1 text-[14px] font-sans text-gray-400">
+                                                                            Date:&nbsp;<span id="cartBrief"></span>
+                                                                        </p>
                                                                     </div>
+                                                                    <p
+                                                                        class="row-span-2 row-end-2 text-md text-gray-800 sm:order-1 sm:ml-6 sm:w-1/3 sm:flex-none sm:text-right">
+                                                                        €&nbsp;<span id="cartPrice"></span></p>
+                                                                    <div
+                                                                        class="flex items-center sm:block sm:flex-none sm:text-center">
+                                                                        <div
+                                                                            class="flex justify-center items-center mb-2 gap-1">
+                                                                            <button id="cartMinusBtn"
+                                                                                class="flex justify-center items-center w-8 h-8 border-2 rounded-md text-gray-800 hover:bg-subPurple hover:text-lightGray active:opacity-50"><i
+                                                                                    class="fa-solid fa-minus"></i></button>
+                                                                            <input id="cartQuantity" type="number"
+                                                                                class="no-spinner w-12 h-8 border-2 text-center "
+                                                                                value="1">
+                                                                            <button id="cartPlusBtn"
+                                                                                class="flex justify-center items-center w-8 h-8 border-2 rounded-md hover:bg-subPurple hover:text-lightGray active:opacity-50"><i
+                                                                                    class="fa-solid fa-plus"></i></button>
+                                                                        </div>
 
-                                                                    <button id="cartRemoveBtn" type="button"
-                                                                        class="ml-4 text-[10px] text-subPurple hover:opacity-50 sm:ml-0 sm:mt-2">
-                                                                        <span>Remove</span>
-                                                                    </button>
+                                                                        <button id="cartRemoveBtn" type="button"
+                                                                            class="ml-4 text-[10px] text-subPurple hover:opacity-50 sm:ml-0 sm:mt-2">
+                                                                            <span>Remove</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <hr><br>
+                                                        </div>
+                                                        <section aria-labelledby="summary-heading"
+                                                            class="mt-auto sm:px-6 lg:px-8">
+                                                            <div class="bg-gray-50 p-6 sm:rounded-lg sm:p-8">
+                                                                <div class="flow-root">
+                                                                    <dl class="-my-4 divide-y divide-gray-200 text-sm">
+                                                                        <div
+                                                                            class="flex items-center justify-between py-4">
+                                                                            <dt class="text-gray-400">Subtotal</dt>
+                                                                            <dd class="font-medium text-gray-400">
+                                                                                €&nbsp;<span id="cartSubtotal"></span>
+                                                                            </dd>
+                                                                        </div>
+                                                                        <div
+                                                                            class="flex items-center justify-between py-4">
+                                                                            <dt class="text-gray-400">
+                                                                                Tax&nbsp;&nbsp;&nbsp;<span
+                                                                                    class="text-subPurple text-[16px] hover:opacity-50 cursor-pointer"><i
+                                                                                        class="fa-solid fa-circle-question"></i></span>
+                                                                            </dt>
+                                                                            <dd id="cartTax"
+                                                                                class="font-medium text-gray-400">
+                                                                                €&nbsp;<span>0.00</span></dd>
+                                                                        </div>
+                                                                        <div
+                                                                            class="flex items-center justify-between py-4">
+                                                                            <dt
+                                                                                class="text-base font-medium text-gray-800">
+                                                                                Order
+                                                                                total
+                                                                            </dt>
+                                                                            <dd
+                                                                                class="text-base font-medium text-gray-800">
+                                                                                €&nbsp;<span id="cartOrderTotal"></span>
+                                                                            </dd>
+                                                                        </div>
+                                                                    </dl>
                                                                 </div>
                                                             </div>
-                                                        </li>
-                                                        <hr><br>
+                                                        </section>
+                                                        <div class="mt-8 flex justify-end px-4 sm:px-6 lg:px-8">
+                                                            <button type="submit"
+                                                                class="rounded-md border border-transparent bg-subPurple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-mainYellow hover:text-gray-800 active:opacity-50">Continue
+                                                                to Payment</button>
+                                                        </div>
                                                     </div>
-                                                </div>
+
+                                                </template>
                                             </section>
-
-                                            <section aria-labelledby="summary-heading" class="mt-auto sm:px-6 lg:px-8">
-                                                <div class="bg-gray-50 p-6 sm:rounded-lg sm:p-8">
-                                                    <h2 id="summary-heading" class="sr-only">Order summary</h2>
-
-                                                    <div class="flow-root">
-                                                        <dl class="-my-4 divide-y divide-gray-200 text-sm">
-                                                            <div class="flex items-center justify-between py-4">
-                                                                <dt class="text-gray-400">Subtotal</dt>
-                                                                <dd id="cartSubtotal" class="font-medium text-gray-400">
-                                                                    €&nbsp;<span class="cartSubtotal">350</span></dd>
-                                                            </div>
-                                                            <div class="flex items-center justify-between py-4">
-                                                                <dt class="text-gray-400">Tax&nbsp;&nbsp;&nbsp;<span
-                                                                        class="text-subPurple text-[16px] hover:opacity-50 cursor-pointer"><i
-                                                                            class="fa-solid fa-circle-question"></i></span>
-                                                                </dt>
-                                                                <dd id="cartTax" class="font-medium text-gray-400">
-                                                                    €&nbsp;<span>0.00</span></dd>
-                                                            </div>
-                                                            <div class="flex items-center justify-between py-4">
-                                                                <dt class="text-base font-medium text-gray-800">Order
-                                                                    total
-                                                                </dt>
-                                                                <dd id="cartOrderTotal"
-                                                                    class="text-base font-medium text-gray-800">
-                                                                    €&nbsp;<span class="cartOrderTotal">350.00</span>
-                                                                </dd>
-                                                            </div>
-                                                        </dl>
-                                                    </div>
-                                                </div>
-                                            </section>
-
-                                            <div class="hidden mt-8 flex justify-end px-4 sm:px-6 lg:px-8">
-                                                <button type="submit"
-                                                    class="rounded-md border border-transparent bg-subPurple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-mainYellow hover:text-gray-800 active:opacity-50">Continue
-                                                    to Payment</button>
-                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -768,31 +774,51 @@
     <script src="./src/js/productCardDatas.js"></script>
 
     <script>
+        // 解析 URL 的查詢字串
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = Object.fromEntries(urlParams.entries());
+        const productTitle = urlParams.get('title');
+        const productIndex = parseInt(urlParams.get('index'));
+
+        // 設置商品詳情內容
+        document.getElementById('detailsTitle').textContent = product.title;
+        document.getElementById('detailsImg').src = product.imgBig;
+        document.getElementById('detailsPrice').textContent = product.price;
+        document.getElementById('detailsBrief').textContent = product.briefLong;
+
+        // 動態設置 <title>
+        if (productTitle) {
+            document.title = decodeURIComponent(productTitle); // 更新 <title>
+        }
+
         const addToCart = document.querySelector('#addToCart');
         const groupSizeInput = document.querySelector('#groupSizeInput');
+        let selectedDateStr = '';
+
+        // 計算今天 +14 天的日期
+        function getStartDay() {
+            const today = new Date();
+            const targetDate = new Date(today);
+            targetDate.setDate(today.getDate() + 14);
+            return targetDate;
+        }
 
         // date picker by flatpickr
         const datePicker = flatpickr("#datePicker", {
+            minDate: getStartDay(), // 設定最早可選日期
             altInput: true,
             altFormat: "F j, Y",
             dateFormat: "Y-m-d",
+            onChange: function (selectedDates, dateStr, instance) {
+                // `selectedDates` 是一個日期陣列，包含選中的日期物件
+                // `dateStr` 是格式化的日期字串
+                selectedDateStr = dateStr;
+            }
         });
 
-
-
-        // 增加商品到購物車中
-        // const saveProducts = JSON.stringify(products);
-        // localStorage.setItem('products', saveProducts);
-
-        // let cartItems = JSON.parse(localStorage.getItem('products'));
-
-        const cartTitle = document.querySelector('#cartTitle');
-        const cartBrief = document.querySelector('#cartBrief');
-        const cartPrice = document.querySelector('#cartPrice');
-        const cartQuantity = document.querySelector('#cartQuantity');
-        const cartsubTotal = document.querySelector('#cartsubTotal');
-        const cartOrderTotal = document.querySelector('#cartOrderTotal');
         const cartAlert = document.querySelector('#cartAlert');
+        const cartAlertQuantity = document.querySelector('#cartAlertQuantity');
+        const cartEmpty = document.querySelector('#cartEmpty');
 
         addToCartBtn.addEventListener('click', () => {
             // date || group size 欄位必填
@@ -865,28 +891,41 @@
                 },
             });
 
+            const cartContainer = document.querySelector('#cartContainer');
+            const cartTemplate = document.querySelector('#cartTemplate');
+            const cloneCart = cartTemplate.content.cloneNode(true);
+
+            cloneCart.querySelector('#cartTitle').textContent = product.title;
+            cloneCart.querySelector('#cartImg').src = product.img;
+            cloneCart.querySelector('#cartBrief').textContent = selectedDateStr;
+            cloneCart.querySelector('#cartPrice').textContent = product.price;
+            cloneCart.querySelector('#cartSubtotal').textContent = product.price;
+            cloneCart.querySelector('#cartQuantity').textContent = product.quantity;
+            cloneCart.querySelector('#cartOrderTotal').textContent = product.price;
+
+            cartContainer.appendChild(cloneCart);
+
             datePicker.clear();
             groupSizeInput.value = '';
             cartAlert.style.visibility = 'visible';
+            cartEmpty.style.display = 'none';
+
+            const productData = [
+                {
+                    title: product.title,
+                    brief: product.briefLong,
+                    price: product.price,
+                    quantity: product.quantity,
+                    subTotal: product.price,
+                    orderTotal: product.price,
+                }
+            ]
+
+            // let cartData = [];
+            // localStorage.setItem(cartData, 'JSON.stringify(cartData)');
+            // cartData.push(productData);
 
         });
-
-
-        // 解析 URL 的查詢字串
-        const urlParams = new URLSearchParams(window.location.search);
-        const product = Object.fromEntries(urlParams.entries());
-        const productTitle = urlParams.get('title');
-
-        document.getElementById('detailsTitle').textContent = product.title;
-        document.getElementById('detailsImg').src = product.imgBig;
-        document.getElementById('detailsPrice').textContent = product.price;
-        document.getElementById('detailsBrief').textContent = product.briefLong;
-
-        // 確保找到 title 後再動態設置
-        if (productTitle) {
-            document.title = productTitle; // 更新 <title>
-            document.querySelector('.product-title').textContent = productTitle; // 更新頁面標題
-        }
 
     </script>
 </body>
