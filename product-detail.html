@@ -318,86 +318,65 @@
                                                                         </h3>
                                                                         <p
                                                                             class="mt-1 text-[14px] font-sans text-gray-400">
-                                                                            Date:&nbsp;<span id="cartBrief"></span>
+                                                                            Date:&nbsp;<span
+                                                                                id="cartDate"></span>&nbsp;Group
+                                                                            Size:&nbsp;<span id="cartGroupSize"></span>
                                                                         </p>
                                                                     </div>
-                                                                    <div class="flex-col items-end sm:items-center sm:block sm:flex-none sm:text-center">
-                                                                        <p
-                                                                            class="text-md text-gray-800">
+                                                                    <div
+                                                                        class="flex-col items-end sm:items-center sm:block sm:flex-none sm:text-center">
+                                                                        <p class="text-md text-gray-800">
                                                                             €&nbsp;<span id="cartPrice"></span></p>
                                                                         <button id="cartRemoveBtn" type="button"
                                                                             class="text-[10px] text-subPurple hover:opacity-50">
                                                                             <span>Remove</span>
                                                                         </button>
                                                                     </div>
-
-                                                                    <!-- <div
-                                                                        class="flex items-center sm:block sm:flex-none sm:text-center">
-                                                                        <div
-                                                                            class="flex justify-center items-center mb-2 gap-1">
-                                                                            <button id="cartMinusBtn"
-                                                                                class="flex justify-center items-center w-8 h-8 border-2 rounded-md text-gray-800 hover:bg-subPurple hover:text-lightGray active:opacity-50"><i
-                                                                                    class="fa-solid fa-minus"></i></button>
-                                                                            <input id="cartQuantity" type="number"
-                                                                                class="no-spinner w-12 h-8 border-2 text-center "
-                                                                                value="1">
-                                                                            <button id="cartPlusBtn"
-                                                                                class="flex justify-center items-center w-8 h-8 border-2 rounded-md hover:bg-subPurple hover:text-lightGray active:opacity-50"><i
-                                                                                    class="fa-solid fa-plus"></i></button>
-                                                                        </div> 
-                                                                    </div> -->
                                                                 </div>
                                                             </li>
                                                             <hr><br>
                                                         </div>
-                                                        <section aria-labelledby="summary-heading"
-                                                            class="mt-auto sm:px-6 lg:px-8">
-                                                            <div class="bg-gray-50 p-6 sm:rounded-lg sm:p-8">
-                                                                <div class="flow-root">
-                                                                    <dl class="-my-4 divide-y divide-gray-200 text-sm">
-                                                                        <div
-                                                                            class="flex items-center justify-between py-4">
-                                                                            <dt class="text-gray-400">Subtotal</dt>
-                                                                            <dd class="font-medium text-gray-400">
-                                                                                €&nbsp;<span id="cartSubtotal"></span>
-                                                                            </dd>
-                                                                        </div>
-                                                                        <div
-                                                                            class="flex items-center justify-between py-4">
-                                                                            <dt title="More information"
-                                                                                class="text-gray-400">
-                                                                                Tax&nbsp;&nbsp;&nbsp;<span
-                                                                                    class="text-subPurple text-[16px] hover:opacity-50 cursor-pointer"><i
-                                                                                        class="fa-solid fa-circle-question"></i></span>
-                                                                            </dt>
-                                                                            <dd id="cartTax"
-                                                                                class="font-medium text-gray-400">
-                                                                                €&nbsp;<span>0.00</span></dd>
-                                                                        </div>
-                                                                        <div
-                                                                            class="flex items-center justify-between py-4">
-                                                                            <dt
-                                                                                class="text-base font-medium text-gray-800">
-                                                                                Order
-                                                                                total
-                                                                            </dt>
-                                                                            <dd
-                                                                                class="text-base font-medium text-gray-800">
-                                                                                €&nbsp;<span id="cartOrderTotal"></span>
-                                                                            </dd>
-                                                                        </div>
-                                                                    </dl>
+                                                    </div>
+                                                </template>
+                                            </section>
+                                            <section id="totalContainer" class="px-8 hidden">
+                                                <div aria-labelledby=" summary-heading" class="mt-auto sm:px-6 lg:px-8">
+                                                    <div class="bg-gray-50 p-6 sm:rounded-lg sm:p-8">
+                                                        <div class="flow-root">
+                                                            <dl class="-my-4 divide-y divide-gray-200 text-sm">
+                                                                <div class="flex items-center justify-between py-4">
+                                                                    <dt class="text-gray-400">Subtotal</dt>
+                                                                    <dd class="font-medium text-gray-400">
+                                                                        €&nbsp;<span id="cartSubtotal"></span>
+                                                                    </dd>
                                                                 </div>
-                                                            </div>
-                                                        </section>
-                                                        <div class="mt-8 flex justify-end px-4 sm:px-6 lg:px-8">
-                                                            <button type="submit"
-                                                                class="rounded-md border border-transparent bg-subPurple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-mainYellow hover:text-gray-800 active:opacity-50">Continue
-                                                                to Payment</button>
+                                                                <div class="flex items-center justify-between py-4">
+                                                                    <dt title="More information" class="text-gray-400">
+                                                                        Tax&nbsp;&nbsp;&nbsp;<span
+                                                                            class="text-subPurple text-[16px] hover:opacity-50 cursor-pointer"><i
+                                                                                class="fa-solid fa-circle-question"></i></span>
+                                                                    </dt>
+                                                                    <dd id="cartTax" class="font-medium text-gray-400">
+                                                                        €&nbsp;<span>0.00</span></dd>
+                                                                </div>
+                                                                <div class="flex items-center justify-between py-4">
+                                                                    <dt class="text-base font-medium text-gray-800">
+                                                                        Order
+                                                                        total
+                                                                    </dt>
+                                                                    <dd class="text-base font-medium text-gray-800">
+                                                                        €&nbsp;<span id="cartOrderTotal"></span>
+                                                                    </dd>
+                                                                </div>
+                                                            </dl>
                                                         </div>
                                                     </div>
-
-                                                </template>
+                                                    <div class="mt-8 flex justify-end px-4 sm:px-6 lg:px-8">
+                                                        <button type="submit"
+                                                            class="rounded-md border border-transparent bg-subPurple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-mainYellow hover:text-gray-800 active:opacity-50">Continue
+                                                            to Payment</button>
+                                                    </div>
+                                                </div>
                                             </section>
                                         </form>
                                     </div>
@@ -894,46 +873,54 @@
                 },
             });
 
+            cartAlert.style.visibility = 'visible';
+            cartEmpty.style.display = 'none';
+
+            // 購物車 template 商品部分
             const cartContainer = document.querySelector('#cartContainer');
             const cartTemplate = document.querySelector('#cartTemplate');
             const cloneCart = cartTemplate.content.cloneNode(true);
 
             cloneCart.querySelector('#cartTitle').textContent = product.title;
             cloneCart.querySelector('#cartImg').src = product.img;
-            cloneCart.querySelector('#cartBrief').textContent = `${selectedDateStr} / Group Size: ${groupSizeInput.value} `;
+            cloneCart.querySelector('#cartDate').textContent = selectedDateStr;
+            cloneCart.querySelector('#cartGroupSize').textContent = groupSizeInput.value;
             cloneCart.querySelector('#cartPrice').textContent = product.price;
-            cloneCart.querySelector('#cartSubtotal').textContent = product.price;
-            // cloneCart.querySelector('#cartQuantity').textContent = product.quantity;
-            cloneCart.querySelector('#cartOrderTotal').textContent = product.price;
 
             cartContainer.appendChild(cloneCart);
 
-            disabledDates.push(selectedDateStr);
-            datePicker.set('disable', disabledDates);
-            datePicker.clear();
-            // 禁用已選中的日期
-
-
-            groupSizeInput.value = '';
-
-            cartAlert.style.visibility = 'visible';
-            cartEmpty.style.display = 'none';
 
             const productData = [
                 {
                     title: product.title,
-                    brief: product.briefLong,
+                    img: product.img,
+                    date: selectedDateStr,
+                    groupSize: groupSizeInput.value,
                     price: product.price,
                     quantity: product.quantity,
-                    subTotal: product.price,
-                    orderTotal: product.price,
                 }
-            ]
+            ];
 
-            // let cartData = [];
-            // localStorage.setItem(cartData, 'JSON.stringify(cartData)');
-            // cartData.push(productData);
+            let existingCartData = JSON.parse(localStorage.getItem('cartData')) || [];
+            existingCartData.push(productData);
 
+            // 將更新後的資料陣列儲存回 localStorage
+            localStorage.setItem('cartData', JSON.stringify(existingCartData));
+
+            cartData.forEach((item) => {
+                document.querySelector('#cartSubtotal').textContent = item.price;
+                document.querySelector('#cartOrderTotal').textContent = item.price * (cartData.length + 1);
+            });
+
+            totalContainer.style.display = 'block';
+
+            // 禁用已選中的日期
+            disabledDates.push(selectedDateStr);
+            datePicker.set('disable', disabledDates);// 禁用已選中的日期
+            datePicker.clear();
+
+            // 清空輸入欄位
+            groupSizeInput.value = '';
         });
 
     </script>
