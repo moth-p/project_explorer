@@ -302,8 +302,7 @@
                                                 class="w-full h-60 text-gray-400 text-2xl flex justify-center items-center">
                                                 Cart is empty.</p>
 
-                                            <section id="cartContainer" aria-labelledby="cart-heading">
-                                                <template id="cartTemplate">
+                                            <section id="cartContainer" class="hidden" aria-labelledby="cart-heading">
                                                     <div class="px-8">
                                                         <div class="divide-y divide-gray-200 px-4 sm:px-6 lg:px-8">
                                                             <li class="flex px-3 py-8 text-sm sm:items-center">
@@ -337,7 +336,6 @@
                                                             <hr><br>
                                                         </div>
                                                     </div>
-                                                </template>
                                             </section>
                                             <section id="totalContainer" class="px-8 hidden">
                                                 <div aria-labelledby=" summary-heading" class="mt-auto sm:px-6 lg:px-8">
@@ -480,7 +478,7 @@
                     <img id="detailsImg" src="" alt="" class="aspect-square w-full rounded-lg object-cover">
                 </div>
 
-                <!-- Product form -->
+                <!--input 日期選擇器 人數 -->
                 <div class="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
                     <section aria-labelledby="options-heading mb-10">
                         <div>
